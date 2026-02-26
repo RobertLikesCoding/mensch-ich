@@ -1,1 +1,32 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --clr-primary: 135 15%;
+  --clr-secondary: 34 46%;
+  --clr-neutral: 47 58%;
+  --clr-gradient: linear-gradient(
+    180deg,
+    rgba(253, 251, 247, 1) 10%,
+    rgba(245, 239, 217, 1) 92%
+  );
+}
+
+@theme {
+  --color-primary-100: hsl(var(--clr-primary) 80%);
+  --color-primary-200: hsl(var(--clr-primary) 73%);
+  --color-primary-300: hsl(var(--clr-primary) 60%);
+  --color-primary-400: hsl(var(--clr-primary) 50%);
+  --color-primary-500: hsl(var(--clr-primary) 43%);
+  --color-primary-600: hsl(var(--clr-primary) 35%);
+
+  --color-secondary-400: hsl(var(--clr-secondary) 60%);
+  --color-secondary-500: hsl(var(--clr-secondary) 47%);
+  --color-secondary-600: hsl(var(--clr-secondary) 35%);
+
+  --color-neutral-100: hsl(var(--clr-neutral) 98%);
+  --color-neutral-200: hsl(var(--clr-neutral) 95%);
+  --color-neutral-300: hsl(var(--clr-neutral) 91%);
+  --color-neutral-400: hsl(var(--clr-neutral) 85%);
+  --color-neutral-900: hsl(var(--clr-neutral) 9%);
+}
