@@ -3,5 +3,114 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <p class="text-2xl">Menschlich</p>
+  <section class="bg-gray-300 h-100">
+    <h1 class="text-5xl">Ergotherapie Menschlich</h1>
+    <p class="text-lg text-center">
+      Your journey starts here. Explore our services and offerings.
+    </p>
+  </section>
+
+  <section class="flex flex-wrap px-12 justify-center gap-5">
+    <div class="w-full bg-gray-300">
+      <img
+        src="/path/to/huge-image.jpg"
+        alt="About Us Image"
+        class="w-full h-auto"
+      />
+    </div>
+    <div class="p-4">
+      <h2 class="text-3xl font-semibold">About Us</h2>
+      <p class="mt-2">
+        We are dedicated to providing the best service. Our team is committed to
+        excellence and innovation. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Recusandae, saepe. Repellendus harum, aliquam beatae
+        velit facere odit, a eos itaque adipisci ab voluptatibus dolorem atque
+        tempora eligendi aut aliquid culpa.
+      </p>
+      <p class="mt-2">
+        We are dedicated to providing the best service. Our team is committed to
+        excellence and innovation. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Recusandae, saepe. Repellendus harum, aliquam beatae
+        velit facere odit, a eos itaque adipisci ab voluptatibus dolorem atque
+        tempora eligendi aut aliquid culpa.
+      </p>
+      <p class="mt-2">
+        Join us on this journey and discover how we can help you achieve your
+        goals.
+      </p>
+    </div>
+  </section>
+
+  <section class="overflow-x-auto relative">
+    <div class="circle" aria-hidden="true"></div>
+    <div class="flex justify-start gap-4 pb-4 pl-4">
+      <div class="card text-center p-4 border shadow rounded-3xl shrink-0">
+        <img src="/path/to/icon1.png" alt="Icon 1" class="mb-2" />
+        <p>Card 1 Description</p>
+      </div>
+      <div class="card text-center p-4 border shadow rounded-3xl shrink-0">
+        <img src="/path/to/icon2.png" alt="Icon 2" class="mb-2" />
+        <p>Card 2 Description</p>
+      </div>
+      <div class="card text-center p-4 border shadow rounded-3xl shrink-0">
+        <img src="/path/to/icon3.png" alt="Icon 3" class="mb-2" />
+        <p>Card 3 Description</p>
+      </div>
+      <div class="card text-center p-4 border shadow rounded-3xl shrink-0">
+        <img src="/path/to/icon4.png" alt="Icon 4" class="mb-2" />
+        <p>Card 4 Description</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-wrap px-12 justify-center gap-5">
+    <div class="w-full bg-gray-300">
+      <img
+        src="/path/to/huge-image.jpg"
+        alt="About Us Image"
+        class="w-full h-auto"
+      />
+    </div>
+    <div class="p-4">
+      <h2 class="text-3xl font-semibold">About Us</h2>
+      <p class="mt-2">
+        We are dedicated to providing the best service. Our team is committed to
+        excellence and innovation. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Recusandae, saepe. Repellendus harum, aliquam beatae
+        velit facere odit, a eos itaque adipisci ab voluptatibus dolorem atque
+        tempora eligendi aut aliquid culpa.
+      </p>
+      <p class="mt-2">
+        We are dedicated to providing the best service. Our team is committed to
+        excellence and innovation. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Recusandae, saepe. Repellendus harum, aliquam beatae
+        velit facere odit, a eos itaque adipisci ab voluptatibus dolorem atque
+        tempora eligendi aut aliquid culpa.
+      </p>
+      <p class="mt-2">
+        Join us on this journey and discover how we can help you achieve your
+        goals.
+      </p>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .card {
+    width: 370px;
+    height: 550px;
+    background-color: white;
+  }
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(100, 150, 200, 0.3); /* halbtransparent */
+    width: 40rem;
+    height: 40rem;
+    /* Beispielposition, auch außerhalb des sichtbaren Bereichs */
+    top: 100px;
+    left: -50px;
+    z-index: -1; /* damit sie hinter dem Inhalt bleiben */
+  }
+</style>
