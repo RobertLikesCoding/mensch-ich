@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="bg-gray-300 h-100">
-    <h1 class="text-5xl">Ergotherapie Menschlich</h1>
-    <p class="text-lg text-center">
+  <section class="gradient h-100">
+    <h1 class="text-5xl handwritten">Ergotherapie Menschlich</h1>
+    <p class="text-lg text-center font-bold">
       Your journey starts here. Explore our services and offerings.
     </p>
   </section>
@@ -105,12 +105,19 @@ import Layout from "../layouts/Layout.astro";
   .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(100, 150, 200, 0.3); /* halbtransparent */
+    background: rgba(100, 150, 200, 0.3);
     width: 40rem;
     height: 40rem;
-    /* Beispielposition, auch außerhalb des sichtbaren Bereichs */
     top: 100px;
     left: -50px;
-    z-index: -1; /* damit sie hinter dem Inhalt bleiben */
+    z-index: -1;
+  }
+
+  .gradient {
+    background: var(--clr-gradient);
+  }
+
+  .handwritten {
+    font-family: "Beth Ellen", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   }
 </style>

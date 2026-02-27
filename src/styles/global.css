@@ -39,8 +39,8 @@
   --clr-neutral: 47 58%;
   --clr-gradient: linear-gradient(
     180deg,
-    rgba(253, 251, 247, 1) 10%,
-    rgba(245, 239, 217, 1) 92%
+    var(--color-neutral-100) 10%,
+    var(--color-neutral-300) 92%
   );
 }
 
