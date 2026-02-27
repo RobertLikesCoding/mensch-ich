@@ -1,5 +1,6 @@
 ---
-import Navbar from "../components/Navbar.vue";
+import NavbarDesktop from "../components/NavbarDesktop.vue";
+import NavbarMobile from "../components/NavbarMobile.vue";
 import "../styles/global.css"; // imports tailwind to all pages using this layout
 ---
 
@@ -16,7 +17,8 @@ import "../styles/global.css"; // imports tailwind to all pages using this layou
     <header
       class="w-full flex items-center justify-center bg-neutral-100 fixed"
     >
-      <Navbar />
+      <NavbarDesktop class="sm:flex hidden" />
+      <NavbarMobile class="sm:hidden" />
     </header>
     <main class="flex flex-col gap-10 nav-margin">
       <slot />

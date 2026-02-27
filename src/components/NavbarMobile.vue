@@ -1,22 +1,5 @@
 <template>
-  <nav class="sm:flex hidden justify-center items-center gap-5 md:gap-10 py-2">
-    <img
-      src="/src/assets/logo_menschlich.svg"
-      alt="Logo Ergotherapie Menschlich."
-    />
-    <ul class="flex gap-5 md:gap-10">
-      <li class="hover:text-shadow-2xs">
-        <a href="#leistungen">Leistungen</a>
-      </li>
-      <li class="hover:text-shadow-2xs"><a href="#über">Über uns</a></li>
-      <li class="hover:text-shadow-2xs"><a href="#team">Team</a></li>
-      <li class="hover:text-shadow-2xs"><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <nav
-    class="flex justify-between w-full items-center gap-10 sm:hidden relative py-2"
-  >
+  <nav class="flex justify-between w-full items-center gap-10 relative py-2">
     <img
       src="/src/assets/logo_menschlich.svg"
       alt="Logo Ergotherapie Menschlich."
@@ -24,6 +7,7 @@
     />
     <input type="checkbox" class="mobile-menu" id="dropdown-active" />
 
+    <label for="dropdown-active" id="overlay"></label>
     <div class="p-2 pe-3" id="toggle-icons">
       <label for="dropdown-active" class="mobile-icon sm:hidden burger-toggle">
         <span class="bg-neutral-900"></span>
@@ -33,10 +17,10 @@
     </div>
 
     <div
-      class="dropdown-menu hidden absolute h-auto w-full text-center top-22 opacity-0 transition-all duration-300"
+      class="dropdown-menu absolute w-full text-center top-22 opacity-0 transition-all duration-400 z-10"
     >
       <ul class="flex flex-col gap-5 p-5 bg-neutral-100 w-full">
-        <li class="active:text-shadow-2xs">
+        <li class="active:text-shadow-lg">
           <a href="#leistungen">Leistungen</a>
         </li>
         <li class="active:text-shadow-lg"><a href="#über">Über uns</a></li>
@@ -95,5 +79,17 @@
     display: flex;
     opacity: 1;
     transform: translateY(0);
+  }
+
+  #overlay {
+    position: fixed;
+  }
+
+  #dropdown-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
   }
 </style>
