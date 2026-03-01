@@ -17,7 +17,7 @@
     </div>
 
     <div
-      class="dropdown-menu absolute w-full text-center top-22 opacity-0 transition-all duration-400 z-10"
+      class="dropdown-menu absolute w-full text-center top-22 opacity-0 pointer-events-none transition-all duration-400 z-10"
     >
       <ul class="flex flex-col gap-5 p-5 bg-neutral-100 w-full">
         <li class="active:text-shadow-lg">
@@ -79,6 +79,7 @@
     display: flex;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: all;
   }
 
   #overlay {
