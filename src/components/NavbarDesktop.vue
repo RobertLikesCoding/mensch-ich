@@ -1,5 +1,5 @@
 <template>
-  <nav class="justify-center items-center gap-5 md:gap-10 py-2">
+  <nav>
     <img
       src="/src/assets/logo_menschlich.svg"
       alt="Logo Ergotherapie Menschlich."

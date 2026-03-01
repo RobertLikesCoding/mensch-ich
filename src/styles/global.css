@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 @font-face {
   font-family: "Beth Ellen";
@@ -42,6 +41,8 @@
     var(--color-neutral-100) 10%,
     var(--color-neutral-300) 92%
   );
+  --navbar-height-desktop: 132px;
+  --navbar-height-mobile: 6rem;
 }
 
 @theme {
@@ -61,4 +62,10 @@
   --color-neutral-300: hsl(var(--clr-neutral) 91%);
   --color-neutral-400: hsl(var(--clr-neutral) 85%);
   --color-neutral-900: hsl(var(--clr-neutral) 9%);
+}
+
+/* GLOBAL CLASSES */
+
+.handwritten {
+  font-family: "Beth Ellen", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 }

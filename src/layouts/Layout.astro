@@ -17,10 +17,14 @@ import "../styles/global.css"; // imports tailwind to all pages using this layou
     <header
       class="w-full flex items-center justify-center bg-neutral-100 fixed"
     >
-      <NavbarDesktop class="sm:flex hidden" />
-      <NavbarMobile class="sm:hidden" />
+      <NavbarDesktop
+        class="sm:flex hidden items-center gap-5 md:gap-10 nav-height-desktop"
+      />
+      <NavbarMobile
+        class="sm:hidden flex justify-between w-full items-center gap-10 nav-height-mobile"
+      />
     </header>
-    <main class="flex flex-col gap-10 nav-margin">
+    <main class="flex flex-col gap-10 nav-margin m-auto">
       <slot />
     </main>
     <footer class="w-full flex p-3 items-center justify-center bg-amber-100">
@@ -45,6 +49,14 @@ import "../styles/global.css"; // imports tailwind to all pages using this layou
       @media (max-width: 639px) {
         padding-top: 96px;
       }
+    }
+
+    .nav-height-desktop {
+      height: var(--navbar-height-desktop);
+    }
+
+    .nav-height-mobile {
+      height: var(--navbar-height-mobile);
     }
   </style>
 </html>
