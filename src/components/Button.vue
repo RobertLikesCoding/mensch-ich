@@ -19,17 +19,26 @@
     },
   );
 
-  const classes = computed(() => {
-    const base = "rounded-full shadow px-3 py-2";
-    const background =
-      props.variant === "hollow" ? "" : `bg-${props.color}-500`;
-    const border =
-      props.variant === "hollow" ? `border-2 border-${props.color}-500` : "";
-    const text =
-      props.variant === "hollow"
-        ? `text-${props.color}-500`
-        : "text-neutral-100";
+  const styles = {
+    primary: {
+      solid: "bg-primary-600 text-neutral-100",
+      hollow: "border-2 border-primary-600 text-primary-600",
+    },
+    secondary: {
+      solid: "bg-secondary-600 text-neutral-100",
+      hollow: "border-2 border-secondary-600 text-secondary-600",
+    },
+  } as const;
 
-    return [base, background, border, text].join(" ");
+  const classes = computed(() => {
+    const base =
+      "flex items-center justify-center rounded-full shadow px-3 py-2 font-bold";
+
+    const colorKey = props.color ?? "secondary";
+    const variantKey = props.variant === "hollow" ? "hollow" : "solid";
+
+    const variantClasses = styles[colorKey][variantKey];
+
+    return [base, variantClasses].join(" ");
   });
 </script>

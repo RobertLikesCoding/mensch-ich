@@ -30,12 +30,7 @@
 
       <div class="flex gap-3">
         <Button label="Termin vereinbaren" to="#kontakt" />
-        <Button
-          label="Unsere Leistungen"
-          to="#kontakt"
-          color="secondary"
-          variant="hollow"
-        />
+        <Button label="Unsere Leistungen" to="#kontakt" variant="hollow" />
       </div>
     </div>
 
@@ -48,8 +43,4 @@
   </section>
 </template>
 
-<style lang="css" scoped>
-  section {
-    height: calc(100vh - var(--navbar-height-desktop));
-  }
-</style>
+<style lang="css" scoped></style>
