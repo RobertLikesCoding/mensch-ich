@@ -1,14 +1,10 @@
 ---
+import HeroSection from "../components/HeroSection.vue";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="gradient h-100">
-    <h1 class="text-5xl handwritten">Ergotherapie Menschlich</h1>
-    <p class="text-lg text-center font-bold">
-      Your journey starts here. Explore our services and offerings.
-    </p>
-  </section>
+  <HeroSection />
 
   <section class="flex flex-wrap px-12 justify-center gap-5">
     <div class="w-full bg-gray-300">
@@ -115,9 +111,5 @@ import Layout from "../layouts/Layout.astro";
 
   .gradient {
     background: var(--clr-gradient);
-  }
-
-  .handwritten {
-    font-family: "Beth Ellen", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between w-full items-center gap-10 relative py-2">
+  <nav>
     <img
       src="/src/assets/logo_menschlich.svg"
       alt="Logo Ergotherapie Menschlich."
@@ -8,7 +8,7 @@
     <input type="checkbox" class="mobile-menu" id="dropdown-active" />
 
     <label for="dropdown-active" id="overlay"></label>
-    <div class="p-2 pe-3" id="toggle-icons">
+    <div class="pe-3 p-2" id="toggle-icons">
       <label for="dropdown-active" class="mobile-icon sm:hidden burger-toggle">
         <span class="bg-neutral-900"></span>
         <span class="bg-neutral-900"></span>
@@ -17,7 +17,7 @@
     </div>
 
     <div
-      class="dropdown-menu absolute w-full text-center top-22 opacity-0 transition-all duration-400 z-10"
+      class="dropdown-menu absolute w-full text-center top-22 opacity-0 pointer-events-none transition-all duration-400 z-10"
     >
       <ul class="flex flex-col gap-5 p-5 bg-neutral-100 w-full">
         <li class="active:text-shadow-lg">
@@ -79,6 +79,7 @@
     display: flex;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: all;
   }
 
   #overlay {
