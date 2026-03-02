@@ -26,7 +26,7 @@
     },
     secondary: {
       solid: "bg-secondary-600 text-neutral-100",
-      hollow: "border-2 border-secondary-600 text-secondary-600",
+      hollow: "border-2 border-secondary-600 text-secondary-600 bg-neutral-100",
     },
   } as const;
 
