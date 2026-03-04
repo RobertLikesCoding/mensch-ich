@@ -1,6 +1,6 @@
 <template>
-  <section class="px-3 flex flex-col lg:items-center">
-    <div class="text-center">
+  <section class="flex flex-col lg:items-center">
+    <div class="text-center relative px-3">
       <h2 class="text-3xl font-bold text-primary-600 mb-3">
         Unsere Leistungen
       </h2>
@@ -9,16 +9,28 @@
         Gruppenbehandlungen für alle Altersgruppen – kassenärztliche Leistungen
         und Selbstzahlerangebote.
       </p>
+
+      <!-- decorative shapes -->
+      <div
+        class="bg-neutral-300 rounded-full absolute -z-10 -left-64"
+        style="width: 400px; height: 400px"
+      ></div>
+      <div
+        class="bg-neutral-300 rounded-full absolute -z-10 top-84"
+        style="width: 260px; height: 260px; right: -10%"
+      ></div>
     </div>
 
-    <div class="overflow-x-auto flex gap-3 py-10">
-      <ServiceCard
-        v-for="service in services"
-        :title="service.title"
-        :img="service.illustration"
-      >
-        {{ service.description }}
-      </ServiceCard>
+    <div class="overflow-x-auto">
+      <div class="px-3 flex gap-3 py-10">
+        <ServiceCard
+          v-for="service in services"
+          :title="service.title"
+          :img="service.illustration"
+        >
+          {{ service.description }}
+        </ServiceCard>
+      </div>
     </div>
   </section>
 </template>
