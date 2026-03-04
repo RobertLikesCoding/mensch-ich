@@ -3,10 +3,8 @@
 </script>
 
 <template>
-  <section
-    class="flex justify-center items-center gradient overflow-hidden relative"
-  >
-    <div class="flex flex-col items-start gap-8 z-10 p-3">
+  <section class="flex items-center gradient overflow-hidden relative">
+    <div class="max-w-6xl m-auto flex flex-col items-start gap-8 z-10 p-3">
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
       >

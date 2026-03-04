@@ -1,23 +1,43 @@
 <template>
-  <section>
-    <h2>Unsere Leistungen</h2>
-    <p>
-      Wir bieten Ihnen ein breites Spektrum an ergotherapeutischen Einzel- und
-      Gruppenbehandlungen für alle Altersgruppen – kassenärztliche Leistungen
-      und Selbstzahlerangebote.
-    </p>
+  <section class="flex flex-col lg:items-center">
+    <div class="text-center relative px-3">
+      <h2 class="text-3xl font-bold text-primary-600 mb-3">
+        Unsere Leistungen
+      </h2>
+      <p>
+        Wir bieten Ihnen ein breites Spektrum an ergotherapeutischen Einzel- und
+        Gruppenbehandlungen für alle Altersgruppen – kassenärztliche Leistungen
+        und Selbstzahlerangebote.
+      </p>
 
-    <ServiceCard
-      v-for="service in services"
-      :title="service.title"
-      :img="service.illustration"
-    >
-      {{ service.description }}
-    </ServiceCard>
+      <!-- decorative shapes -->
+      <div
+        class="bg-neutral-300 rounded-full absolute -z-10 -left-64"
+        style="width: 400px; height: 400px"
+      ></div>
+      <div
+        class="bg-neutral-300 rounded-full absolute -z-10 top-84"
+        style="width: 260px; height: 260px; right: -10%"
+      ></div>
+    </div>
+
+    <div class="overflow-x-auto">
+      <div class="px-3 flex gap-3 py-10">
+        <ServiceCard
+          v-for="service in services"
+          :title="service.title"
+          :img="service.illustration"
+        >
+          {{ service.description }}
+        </ServiceCard>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
+  import ServiceCard from "./ServiceCard.vue";
+
   const services = [
     {
       title: "Pädiatrie",
@@ -45,5 +65,3 @@
     },
   ];
 </script>
-
-<style lang="css" scoped></style>
