@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="flex items-center gradient overflow-hidden relative">
+  <section class="flex items-center overflow-hidden relative">
     <div class="m-auto flex flex-col items-start gap-8 z-10 p-3 content-box">
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
@@ -52,6 +52,7 @@
 <style lang="css" scoped>
   section {
     height: calc(100dvh - var(--navbar-height-desktop));
+    background: var(--clr-gradient);
 
     @media (max-width: 640px) {
       height: calc(100dvh - var(--navbar-height-mobile));
