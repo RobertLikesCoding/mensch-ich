@@ -3,10 +3,10 @@
     <img
       src="src/assets/18706286-leaves-5771440_1280.jpg"
       alt="leaves"
-      class="flex-1 object-fill rounded-2xl max-w-md shadow"
+      class="rounded-2xl max-w-md shadow"
     />
 
-    <div class="flex-1 max-w-xl">
+    <div class="max-w-xl">
       <h2 class="text-3xl font-bold text-primary-600 mb-3">
         Unsere Philosophy
       </h2>
@@ -94,5 +94,5 @@
 </template>
 
 <script setup lang="ts">
-  import CheckCircleIcon from "./CheckCircleIcon.vue";
+  import CheckCircleIcon from "./UI/CheckCircleIcon.vue";
 </script>
