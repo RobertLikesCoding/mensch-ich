@@ -8,7 +8,7 @@
       />
 
       <div class="max-w-xl">
-        <h2 class="text-3xl font-bold text-primary-600 mb-3">
+        <h2 class="text-4xl font-bold text-primary-600 mb-3">
           Unsere Philosophy
         </h2>
         <p class="font-bold">

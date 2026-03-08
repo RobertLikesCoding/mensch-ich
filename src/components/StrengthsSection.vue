@@ -7,7 +7,7 @@
         Was uns auszeichnet
       </h3 text-shadow-lg>
       <div class="flex gap-10">
-        <div class="text-center text-neutral-100 text-shadow-lg">
+        <div class="text-center text-neutral-100 text-shadow-lg">shadow-lg
           <h4 class="text-2xl font-bold mb-3">Ganzheitlicher Blick</h4>
           <p>
             Wir betrachten körperliche, psychische und soziale Faktoren in ihrer
