@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col lg:items-center">
-    <div class="text-center relative px-3">
-      <h2 class="text-3xl font-bold text-primary-600 mb-3">
+    <div class="text-center relative px-3 content-box">
+      <h2 class="text-4xl font-bold text-primary-600 mb-3">
         Unsere Leistungen
       </h2>
       <p>
