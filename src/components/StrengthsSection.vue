@@ -33,7 +33,7 @@
 
     <!-- decorative shapes -->
     <div
-      class="bg-primary-500 absolute -z-10 -top-10"
+      class="bg-primary-500 absolute -z-10 -top-10 drop-shadow-xl"
       style="width: 2000px; height: 616px; rotate: -3deg"
     ></div>
   </section>

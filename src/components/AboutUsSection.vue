@@ -85,9 +85,9 @@
             <span>Beratung als Hilfe zur Selbsthilfe</span>
           </li>
         </ul>
-
-        <!-- decorative shapes -->
       </div>
+
+      <!-- decorative shapes -->
       <div
         class="bg-neutral-300 rounded-full absolute -z-10 -top-20 -left-20"
         style="width: 800px; height: 800px"
