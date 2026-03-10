@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.vue";
 import NavbarDesktop from "../components/NavbarDesktop.vue";
 import NavbarMobile from "../components/NavbarMobile.vue";
 import "../styles/global.css"; // imports tailwind to all pages using this layout
@@ -27,9 +28,7 @@ import "../styles/global.css"; // imports tailwind to all pages using this layou
     <main class="flex flex-col gap-20 nav-margin m-auto">
       <slot />
     </main>
-    <footer class="w-full flex p-3 items-center justify-center bg-amber-100">
-      Hello, I'm the footer
-    </footer>
+    <Footer />
   </body>
 
   <style>
