@@ -1,5 +1,5 @@
 <template>
-  <section class="flex lg:justify-center relative px-3">
+  <section class="flex justify-center relative px-3">
     <div class="flex flex-col gap-5 content-box">
       <h2 class="text-4xl font-bold text-primary-600 mb-3 text-center">
         Kontakt
@@ -8,7 +8,9 @@
         Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? <br />
         Wir sind für Sie da!
       </p>
-      <div class="flex flex-wrap gap-5 sm:ps-0 ps-10">
+      <div
+        class="flex flex-col sm:flex-row m-auto w-80 sm:w-full flex-wrap gap-5 sm:ps-0 ps-10"
+      >
         <div class="flex p-1">
           <TelephoneIcon class="text-primary-600 m-3" />
           <div>

@@ -1,16 +1,16 @@
 <template>
-  <section class="flex lg:justify-center relative px-3">
+  <section class="flex justify-center relative px-3">
     <div class="content-box flex flex-col items-center gap-5">
       <div class="text-neutral-100 text-shadow-lg text-center">
         <h2 class="text-4xl font-bold mb-3">Unser Team</h2>
         <p>
-          Zwei erfahrene Ergotherapeutinnen mit gemeinsamer Vision: Eine
-          moderne, sozial verantwortungsvolle Praxis, die fachliche Qualität und
-          Menschlichkeit vereint.
+          Zwei erfahrene Ergotherapeutinnen mit gemeinsamer Vision: <br />
+          Eine moderne, sozial verantwortungsvolle Praxis, die fachliche
+          Qualität und Menschlichkeit vereint.
         </p>
       </div>
       <!-- add team cards here -->
-      <div class="flex sm:flex-nowrap flex-wrap gap-5">
+      <div class="flex flex-wrap justify-center gap-5">
         <TeamCard
           v-for="member in team"
           :key="member.name"
@@ -52,17 +52,17 @@
         "Claudia Rothe verfügt über fundiertes Wissen in Praxismanagement und der Entwicklung digitaler sowie mobiler Versorgungsangebote. Sie pflegt enge Kooperationen mit zwei Ausbildungsschulen und trägt aktiv zur Nachwuchsförderung bei.",
       imgPath: "src/assets/Robert_Avatar.png",
     },
-    {
-      name: "Lilly Benduhn",
-      skills: [
-        "Sensorische Integrationstherapie",
-        "Respektare®",
-        "Praxismanagement",
-        "Ausbilderin (4 Jahre Erfahrung)",
-      ],
-      description:
-        "Claudia Rothe verfügt über fundiertes Wissen in Praxismanagement und der Entwicklung digitaler sowie mobiler Versorgungsangebote. Sie pflegt enge Kooperationen mit zwei Ausbildungsschulen und trägt aktiv zur Nachwuchsförderung bei.",
-      imgPath: "src/assets/Robert_Avatar.png",
-    },
+    // {
+    //   name: "Lilly Benduhn",
+    //   skills: [
+    //     "Sensorische Integrationstherapie",
+    //     "Respektare®",
+    //     "Praxismanagement",
+    //     "Ausbilderin (4 Jahre Erfahrung)",
+    //   ],
+    //   description:
+    //     "Claudia Rothe verfügt über fundiertes Wissen in Praxismanagement und der Entwicklung digitaler sowie mobiler Versorgungsangebote. Sie pflegt enge Kooperationen mit zwei Ausbildungsschulen und trägt aktiv zur Nachwuchsförderung bei.",
+    //   imgPath: "src/assets/Robert_Avatar.png",
+    // },
   ];
 </script>
