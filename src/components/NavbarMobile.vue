@@ -20,18 +20,16 @@
       class="dropdown-menu absolute w-full text-center top-22 opacity-0 pointer-events-none transition-all duration-400 z-10"
     >
       <ul class="flex flex-col gap-5 p-5 bg-neutral-100 w-full">
-        <li class="active:text-shadow-lg">
-          <a href="#leistungen">Leistungen</a>
+        <li>
+          <a href="#leistungen" class="active:text-shadow-lg">Leistungen</a>
         </li>
-        <li class="active:text-shadow-lg"><a href="#über">Über uns</a></li>
-        <li class="active:text-shadow-lg"><a href="#team">Team</a></li>
-        <li class="active:text-shadow-lg"><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#überuns" class="active:text-shadow-lg">Über uns</a></li>
+        <li><a href="#team" class="active:text-shadow-lg">Team</a></li>
+        <li><a href="#kontakt" class="active:text-shadow-lg">Kontakt</a></li>
       </ul>
     </div>
   </nav>
 </template>
-
-<script setup lang="ts"></script>
 
 <style>
   #dropdown-active {

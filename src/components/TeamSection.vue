@@ -1,6 +1,6 @@
 <template>
-  <section class="flex justify-center relative px-3">
-    <div class="content-box flex flex-col items-center gap-5">
+  <section id="team" class="flex justify-center relative px-3">
+    <div class="max-w-5xl flex flex-col items-center gap-5">
       <div class="text-neutral-100 text-shadow-lg text-center">
         <h2 class="text-4xl font-bold mb-3">Unser Team</h2>
         <p>
@@ -66,3 +66,9 @@
     // },
   ];
 </script>
+
+<style scoped>
+  section {
+    scroll-margin-top: 150px;
+  }
+</style>
