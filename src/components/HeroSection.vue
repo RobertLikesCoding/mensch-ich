@@ -34,10 +34,10 @@
         <p>Was darf ich tun? Wie kann ich meine Genesung unterstützen?</p>
       </div>
 
-      <div class="flex gap-3">
-        <Button label="Termin vereinbaren" to="#kontakt" />
-        <Button label="Unsere Leistungen" to="#kontakt" variant="hollow" />
-      </div>
+      <!-- <div class="flex gap-3">
+        <Button label="Kontakt aufnehmen" to="/#kontakt" />
+        <Button label="Unsere Leistungen" to="/#kontakt" variant="hollow" />
+      </div> -->
     </div>
 
     <!-- BACKGROUND IMAGE -->

@@ -1,14 +1,14 @@
 <template>
   <nav>
     <img
-      src="/src/assets/logo_menschlich.svg"
+      :src="imgLogo.src"
       alt="Logo Ergotherapie Menschlich."
-      class="h-20 ps-3"
+      class="h-20 ps-5"
     />
     <input type="checkbox" class="mobile-menu" id="dropdown-active" />
 
     <label for="dropdown-active" id="overlay"></label>
-    <div class="pe-3 p-2" id="toggle-icons">
+    <div class="pe-5 p-2" id="toggle-icons">
       <label for="dropdown-active" class="mobile-icon sm:hidden burger-toggle">
         <span class="bg-neutral-900"></span>
         <span class="bg-neutral-900"></span>
@@ -25,11 +25,22 @@
         </li>
         <li><a href="#überuns" class="active:text-shadow-lg">Über uns</a></li>
         <li><a href="#team" class="active:text-shadow-lg">Team</a></li>
-        <li><a href="#kontakt" class="active:text-shadow-lg">Kontakt</a></li>
+        <li class="m-auto">
+          <Button
+            label="Kontakt"
+            to="/#kontakt"
+            style="height: 30px; width: fit-content"
+          />
+        </li>
       </ul>
     </div>
   </nav>
 </template>
+
+<script setup lang="ts">
+  import imgLogo from "../assets/logo_menschlich.svg";
+  import Button from "./UI/Button.vue";
+</script>
 
 <style>
   #dropdown-active {

@@ -56,6 +56,7 @@
   --color-secondary-400: hsl(var(--clr-secondary) 60%);
   --color-secondary-500: hsl(var(--clr-secondary) 47%);
   --color-secondary-600: hsl(var(--clr-secondary) 35%);
+  --color-secondary-700: hsl(var(--clr-secondary) 30%);
 
   --color-neutral-100: hsl(var(--clr-neutral) 98%);
   --color-neutral-200: hsl(var(--clr-neutral) 95%);

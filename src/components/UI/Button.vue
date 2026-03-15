@@ -1,12 +1,16 @@
 <template>
-  <a :href="to" :class="classes">
+  <a
+    :href="to"
+    :class="[
+      'flex items-center justify-center rounded-full shadow px-3 py-2 font-bold',
+      getVariantClasses(),
+    ]"
+  >
     {{ label }}
   </a>
 </template>
 
 <script setup lang="ts">
-  import { computed } from "vue";
-
   const props = withDefaults(
     defineProps<{
       to: string;
@@ -19,26 +23,14 @@
     },
   );
 
-  const styles = {
-    primary: {
-      solid: "bg-primary-600 text-neutral-100",
-      hollow: "border-2 border-primary-600 text-primary-600",
-    },
-    secondary: {
-      solid: "bg-secondary-600 text-neutral-100",
-      hollow: "border-2 border-secondary-600 text-secondary-600 bg-neutral-100",
-    },
-  } as const;
-
-  const classes = computed(() => {
-    const base =
-      "flex items-center justify-center rounded-full shadow px-3 py-2 font-bold";
-
-    const colorKey = props.color ?? "secondary";
-    const variantKey = props.variant === "hollow" ? "hollow" : "solid";
-
-    const variantClasses = styles[colorKey][variantKey];
-
-    return [base, variantClasses].join(" ");
-  });
+  const getVariantClasses = () => {
+    if (props.color === "primary") {
+      return props.variant === "hollow"
+        ? "border-2 border-primary-600 text-primary-600 hover:bg-primary-100"
+        : "bg-primary-600 text-neutral-100 hover:bg-primary-700 active:bg-primary-700";
+    }
+    return props.variant === "hollow"
+      ? "border-2 border-secondary-600 text-secondary-600 bg-neutral-100 hover:bg-secondary-50"
+      : "bg-secondary-600 text-neutral-100 hover:bg-secondary-700 active:bg-secondary-700";
+  };
 </script>
