@@ -61,7 +61,11 @@
       <!-- decorative shapes -->
       <div
         class="bg-neutral-300 rounded-full absolute -z-10 -top-20 -left-20"
-        style="width: 800px; height: 800px"
+        style="
+          width: 800px;
+          height: 800px;
+          background-color: hsl(34.6, 41.9%, 90%);
+        "
       ></div>
     </div>
   </section>

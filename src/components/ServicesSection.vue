@@ -13,11 +13,20 @@
       <!-- decorative shapes -->
       <div
         class="bg-neutral-300 rounded-full absolute -z-10 -left-64"
-        style="width: 400px; height: 400px"
+        style="
+          width: 400px;
+          height: 400px;
+          background-color: hsl(34.6, 41.9%, 90%);
+        "
       ></div>
       <div
         class="bg-neutral-300 rounded-full absolute -z-10 top-84"
-        style="width: 260px; height: 260px; right: -10%"
+        style="
+          width: 260px;
+          height: 260px;
+          right: -10%;
+          background-color: hsl(34.6, 41.9%, 90%);
+        "
       ></div>
     </div>
 

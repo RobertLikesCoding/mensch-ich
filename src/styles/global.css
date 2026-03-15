@@ -34,12 +34,12 @@
 
 :root {
   --clr-primary: 135 15%;
-  --clr-secondary: 34 46%;
+  --clr-secondary: 21 46%;
   --clr-neutral: 47 58%;
   --clr-gradient: linear-gradient(
     180deg,
     var(--color-neutral-100) 10%,
-    var(--color-neutral-300) 92%
+    #ede2d3
   );
   --navbar-height-desktop: 132px;
   --navbar-height-mobile: 6rem;
