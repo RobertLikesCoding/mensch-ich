@@ -1,11 +1,15 @@
 <template>
   <div
-    class="p-5 bg-primary-500 rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-64 shrink-0 shadow-xl"
+    class="px-3 py-5 bg-linear-to-br from-[#5D7E65]/85 via-[#5D7E65]/95 to-[#4A6A52]/90 rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-64 shrink-0 shadow-xl gap-5"
     style="height: 24rem"
   >
-    <img :src="props.img" :alt="`Illustration für ${props.title}`" />
+    <img
+      :src="props.img"
+      :alt="`Illustration für ${props.title}`"
+      class="flex-1"
+    />
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 flex-2 shrink">
       <h3 class="text-2xl text-shadow-lg">{{ props.title }}</h3>
       <p><slot /></p>
     </div>
@@ -19,4 +23,8 @@
   }>();
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+  img {
+    height: 130px;
+  }
+</style>
