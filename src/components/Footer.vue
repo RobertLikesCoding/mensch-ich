@@ -3,20 +3,9 @@
     class="flex flex-col gap-10 items-center text-neutral-100 bg-neutral-900 p-5"
   >
     <div class="flex gap-5 items-center w-full">
-      <div class="flex flex-1 items-center">
-        <!-- <img
-        src="/src/assets/logo_menschlich.svg"
-        alt="Logo Ergotherapie Menschlich."
-        class="text-neutral-100"
-      /> -->
-        <div class="flex flex-col w-50">
+      <div class="flex flex-1 items-center justify-center gap-10">
+        <div class="flex flex-col w-100">
           <p class="text-2xl font-bold">Wir sind Mitglied des B.E.D.</p>
-          <a
-            href="https://www.bed-ev.de/"
-            target="_blank"
-            class="text-pink-200 underline hover:text-pink-300"
-            >bed-ev.de</a
-          >
         </div>
         <a href="https://www.bed-ev.de/" target="_blank">
           <img

@@ -22,8 +22,7 @@
           <MailIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">E-Mail</p>
-            <a href="mailto:ergo@menschlich.de"></a>
-            ergo@menschlich.de
+            ergotherapie-menschlich@posteo.de
           </div>
         </div>
         <div class="flex p-1">
@@ -31,7 +30,7 @@
           <div>
             <p class="text-primary-600">Adresse</p>
             <p>
-              Dörpfelder Str. 52 <br />
+              Dörpfeldstraße 52 <br />
               12489 Berlin
             </p>
           </div>
@@ -41,10 +40,10 @@
           <div>
             <p class="text-primary-600">Öffnungszeiten</p>
             <p>
-              Mo - Do: 08:00 - 18:00 Uhr <br />
-              Fr: 08:00 - 16:00 Uhr <br />
+              Mo - Do: 09:00 - 18:00 Uhr <br />
+              Fr: 09:00 - 16:00 Uhr <br />
               Sa - So: Geschlossen <br />
-              Termine nach Vereinbarung
+              Termine nur nach Vereinbarung
             </p>
           </div>
         </div>

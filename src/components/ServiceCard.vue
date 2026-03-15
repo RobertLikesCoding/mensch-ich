@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-3 py-5 bg-linear-to-br from-[#5D7E65]/85 via-[#5D7E65]/95 to-[#4A6A52]/90 rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-64 shrink-0 shadow-xl gap-5"
+    class="px-3 py-5 bg-linear-to-br from-[#5D7E65] via-[#5D7E65] to-[#4A6A52] rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-64 shrink-0 shadow-xl gap-5"
     style="height: 24rem"
   >
     <img
