@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <a href="/">
-      <img :src="imgLogo.src" alt="Logo Ergotherapie Menschlich." />
+    <a href="/#page-top">
+      <img :src="imgLogo.src" alt="Logo der Ergotherapie Mensch/ich." />
     </a>
     <ul class="flex gap-5 md:gap-10 items-center">
       <li class="hover:underline underline-offset-5">

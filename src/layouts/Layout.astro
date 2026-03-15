@@ -3,6 +3,12 @@ import Footer from "../components/Footer.vue";
 import NavbarDesktop from "../components/NavbarDesktop.vue";
 import NavbarMobile from "../components/NavbarMobile.vue";
 import "../styles/global.css"; // imports tailwind to all pages using this layout
+
+const {
+  title = "Ergotherapie Mensch/ich – Menschliche Ergotherapie Praxis in Berlin",
+  description = "Ergotherapie Praxis in Berlin – individuelle und menschliche Betreuung.",
+  ogDescription = "Individuelle Ergotherapie für Kinder und Erwachsene in Berlin.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -12,9 +18,15 @@ import "../styles/global.css"; // imports tailwind to all pages using this layou
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Ergotheraphie Menschlich</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={ogDescription} />
+    <!-- <meta property="og:image" content="" /> -->
+
+    <title>{title}</title>
   </head>
-  <body>
+  <body id="page-top">
     <header
       class="w-full flex items-center justify-center bg-neutral-100 fixed z-20"
     >

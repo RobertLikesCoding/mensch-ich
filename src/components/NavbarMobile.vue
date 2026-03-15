@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <a href="/">
+    <a href=/#page-top>
       <img
         :src="imgLogo.src"
-        alt="Logo Ergotherapie Menschlich."
+        alt="Logo der Ergotherapie Mensch/ich."
         class="h-20 ps-5"
       />
     </a>

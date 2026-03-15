@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="flex items-center overflow-hidden relative">
+  <section id="hero" class="flex items-center overflow-hidden relative">
     <div class="m-auto flex flex-col items-start gap-8 z-10 p-3 max-w-5xl">
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
@@ -43,7 +43,6 @@
     <!-- BACKGROUND IMAGE -->
     <img
       :src="heroImage.src"
-      alt="logo menschlich"
       aria-hidden
       class="absolute z-0 md:right-20 sm:-bottom-60 -bottom-20 opacity-70"
       style="fill: var(--color-neutral-100)"
