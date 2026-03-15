@@ -20,7 +20,7 @@
         </div>
         <a href="https://www.bed-ev.de/" target="_blank">
           <img
-            src="/src/assets/logo_bed.jpeg"
+            :src="imgBED.src"
             alt="Logo Bundesverband für Ergotherapeut/innen."
             class="w-25 mb-2"
           />
@@ -41,4 +41,6 @@
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import imgBED from "../assets/logo_bed.jpeg";
+</script>
