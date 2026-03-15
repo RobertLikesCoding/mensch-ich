@@ -4,7 +4,7 @@
   >
     <div class="flex gap-5 items-center w-full">
       <div class="flex flex-1 items-center justify-center gap-10">
-        <div class="flex flex-col w-100">
+        <div class="flex flex-col">
           <p class="text-2xl font-bold">Wir sind Mitglied des B.E.D.</p>
         </div>
         <a href="https://www.bed-ev.de/" target="_blank">

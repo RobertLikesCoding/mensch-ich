@@ -36,6 +36,7 @@
           v-for="service in services"
           :title="service.title"
           :img="service.illustration"
+          :alt="service.alt"
         >
           {{ service.description }}
         </ServiceCard>
@@ -45,11 +46,11 @@
 </template>
 
 <script setup lang="ts">
-  import ServiceCard from "./ServiceCard.vue";
-  import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgGeriatrie from "../assets/Geriatrie.svg";
   import imgOrthopädie from "../assets/Orthopädie.svg";
+  import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgPädiatrie from "../assets/Pädiatrie.svg";
+  import ServiceCard from "./ServiceCard.vue";
 
   const services = [
     {
@@ -57,24 +58,28 @@
       description:
         "Therapie nach Verletzungen, Operationen oder bei chronischen Schmerzen zur Wiederherstellung der Beweglichkeit und Funktionsfähigkeit.",
       illustration: imgOrthopädie.src,
+      alt: "Zeichnung einer Handmassage.",
     },
     {
       title: "Pädiatrie",
       description:
         "Förderung von Kindern mit Entwicklungsverzögerungen, Wahrnehmungsstörungen oder motorischen Schwierigkeiten für eine optimale Entwicklung.",
       illustration: imgPädiatrie.src,
+      alt: "Zeichnung von drei Hände haltenden Kindern.",
     },
     {
       title: "Psychiatrie",
       description:
         "Unterstützung bei psychischen Erkrankungen zur Stärkung der Alltagskompetenzen und Förderung der sozialen Teilhabe.",
       illustration: imgPsychatrie.src,
+      alt: "Zeichnung eines Menschens mit einer negativen Gedankenblase.",
     },
     {
       title: "Geriatrie",
       description:
         "Förderung von Kindern mit Entwicklungsverzögerungen, Wahrnehmungsstörungen oder motorischen Schwierigkeiten für eine optimale Entwicklung.",
       illustration: imgGeriatrie.src,
+      alt: "Zeichnung eines Seniorenpärchens.",
     },
   ];
 </script>
