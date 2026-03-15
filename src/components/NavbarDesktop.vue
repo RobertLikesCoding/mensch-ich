@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <img :src="imgLogo.src" alt="Logo Ergotherapie Menschlich." />
+    <a href="/">
+      <img :src="imgLogo.src" alt="Logo Ergotherapie Menschlich." />
+    </a>
     <ul class="flex gap-5 md:gap-10 items-center">
       <li class="hover:underline underline-offset-5">
         <a href="/#leistungen">Leistungen</a>

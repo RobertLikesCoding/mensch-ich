@@ -1,10 +1,12 @@
 <template>
   <nav>
-    <img
-      :src="imgLogo.src"
-      alt="Logo Ergotherapie Menschlich."
-      class="h-20 ps-5"
-    />
+    <a href="/">
+      <img
+        :src="imgLogo.src"
+        alt="Logo Ergotherapie Menschlich."
+        class="h-20 ps-5"
+      />
+    </a>
     <input type="checkbox" class="mobile-menu" id="dropdown-active" />
 
     <label for="dropdown-active" id="overlay"></label>
