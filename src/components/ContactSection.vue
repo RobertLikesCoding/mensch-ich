@@ -1,6 +1,6 @@
 <template>
-  <section class="flex justify-center relative px-3">
-    <div class="flex flex-col gap-5 content-box">
+  <section id="kontakt" class="flex justify-center relative px-3">
+    <div class="flex flex-col gap-5 max-w-5xl">
       <h2 class="text-4xl font-bold text-primary-600 mb-3 text-center">
         Kontakt
       </h2>
@@ -14,14 +14,14 @@
         <div class="flex p-1">
           <TelephoneIcon class="text-primary-600 m-3" />
           <div>
-            <p>Telefon</p>
+            <p class="text-primary-600">Telefon</p>
             +49152 2880 5368
           </div>
         </div>
         <div class="flex p-1">
           <MailIcon class="text-primary-600 m-3" />
           <div>
-            <p>E-Mail</p>
+            <p class="text-primary-600">E-Mail</p>
             <a href="mailto:ergo@menschlich.de"></a>
             ergo@menschlich.de
           </div>
@@ -29,7 +29,7 @@
         <div class="flex p-1">
           <LocatorIcon class="text-primary-600 m-3" />
           <div>
-            <p>Adresse</p>
+            <p class="text-primary-600">Adresse</p>
             <p>
               Dörpfelder Str. 52 <br />
               12489 Berlin
@@ -39,7 +39,7 @@
         <div class="flex p-1">
           <ClockIcon class="text-primary-600 m-3" />
           <div>
-            <p>Öffnungszeiten</p>
+            <p class="text-primary-600">Öffnungszeiten</p>
             <p>
               Mo - Do: 08:00 - 18:00 Uhr <br />
               Fr: 08:00 - 16:00 Uhr <br />
@@ -59,3 +59,9 @@
   import MailIcon from "./UI/MailIcon.vue";
   import TelephoneIcon from "./UI/TelephoneIcon.vue";
 </script>
+
+<style scoped>
+  section {
+    scroll-margin-top: 150px;
+  }
+</style>

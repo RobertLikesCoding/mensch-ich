@@ -1,10 +1,11 @@
 <script setup lang="ts">
   import Button from "./UI/Button.vue";
+  import heroImage from "../assets/kopf_logo.svg";
 </script>
 
 <template>
   <section class="flex items-center overflow-hidden relative">
-    <div class="m-auto flex flex-col items-start gap-8 z-10 p-3 content-box">
+    <div class="m-auto flex flex-col items-start gap-8 z-10 p-3 max-w-5xl">
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
       >
@@ -41,10 +42,11 @@
 
     <!-- BACKGROUND IMAGE -->
     <img
-      src="/src/assets/hero_logo.png"
+      :src="heroImage.src"
       alt="logo menschlich"
       aria-hidden
-      class="absolute z-0 md:right-20 sm:-bottom-40 -bottom-20"
+      class="absolute z-0 md:right-20 sm:-bottom-60 -bottom-20 opacity-70"
+      style="fill: var(--color-neutral-100)"
     />
   </section>
 </template>
