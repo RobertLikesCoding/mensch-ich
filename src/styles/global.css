@@ -43,7 +43,6 @@
   );
   --navbar-height-desktop: 132px;
   --navbar-height-mobile: 6rem;
-  --content-width: 1000px;
 }
 
 @theme {
@@ -65,12 +64,12 @@
   --color-neutral-900: hsl(var(--clr-neutral) 9%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL CLASSES */
 
 .handwritten {
   font-family: "Beth Ellen", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
-}
-
-.content-box {
-  max-width: var(--content-width);
 }
