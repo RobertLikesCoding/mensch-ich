@@ -44,6 +44,7 @@
     <img
       :src="heroImage.src"
       aria-hidden
+      alt=""
       class="absolute z-0 md:right-20 sm:-bottom-60 -bottom-20 opacity-70"
       style="fill: var(--color-neutral-100)"
     />

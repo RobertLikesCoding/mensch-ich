@@ -8,7 +8,7 @@
       class="object-contain rounded-t-2xl"
     /> -->
     <div class="flex flex-col gap-3 p-3 py-5">
-      <h4 class="text-2xl font-bold text-primary-600">{{ name }}</h4>
+      <h3 class="text-2xl font-bold text-primary-600">{{ name }}</h3>
       <div class="flex flex-wrap gap-1">
         <span
           v-for="(skill, index) in skills"

@@ -30,7 +30,12 @@
       ></div>
     </div>
 
-    <div class="overflow-x-auto">
+    <div
+      class="overflow-x-auto"
+      tabindex="0"
+      role="region"
+      aria-label="Leistungen-Karten"
+    >
       <div class="px-10 md:px-3 flex gap-3 py-10">
         <ServiceCard
           v-for="service in services"

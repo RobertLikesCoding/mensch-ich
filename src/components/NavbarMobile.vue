@@ -1,13 +1,18 @@
 <template>
   <nav>
-    <a href=/#page-top>
+    <a href="/#page-top">
       <img
         :src="imgLogo.src"
         alt="Logo der Ergotherapie Mensch/ich."
         class="h-20 ps-5"
       />
     </a>
-    <input type="checkbox" class="mobile-menu" id="dropdown-active" />
+    <input
+      type="checkbox"
+      class="mobile-menu"
+      id="dropdown-active"
+      aria-label="Mobile Menü öffnen/schließen"
+    />
 
     <label for="dropdown-active" id="overlay"></label>
     <div class="pe-5 p-2" id="toggle-icons">
