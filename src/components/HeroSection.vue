@@ -11,14 +11,14 @@
       >
         Willkommen in der Ergotherapie Mensch/ich!
       </h1>
-      <h1 class="mb-5 handwritten shrink-menschlich sm:hidden">
-        <span class="text-3xl"> Willkommen bei </span>
-        <br />
-        <span class="shrink-menschlich"> Mensch/ich </span>
+      <h1 class="mb-5 handwritten sm:hidden flex flex-col gap-1">
+        <p class="text-2xl shrink-welcome">Willkommen in der Ergotherapie</p>
+        <span class="shrink-menschlich"> Mensch/ich! </span>
       </h1>
-      <span class="text-2xl">
-        Ein Ort der Gesundheit, Entwicklung und Menschlichkeit in Berlin
-        Adlershof.
+      <span class="sm:text-2xl">
+        Bei uns erwartet Sie ein Ort für Gesundheit, Entwicklung und
+        Menschlichkeit. Der Mensch als "Ich" mit all seinen Facetten steht bei
+        uns im Vordergrund. Als Patient*in und als Mitarbeiter*in.
       </span>
       <div class="flex-col gap-3 hidden sm:flex">
         <p>
@@ -73,7 +73,7 @@
   }
 
   .shrink-menschlich {
-    font-size: clamp(3.25rem, 10vw, 4rem);
+    font-size: clamp(2.25rem, 10vw, 4rem);
     line-height: 1.3;
   }
 

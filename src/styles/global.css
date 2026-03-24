@@ -43,6 +43,8 @@
   );
   --navbar-height-desktop: 132px;
   --navbar-height-mobile: 6rem;
+
+  font-size: 1.25rem;
 }
 
 @theme {
