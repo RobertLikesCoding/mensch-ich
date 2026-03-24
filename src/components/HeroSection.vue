@@ -9,7 +9,7 @@
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
       >
-        Willkommen bei Mensch/ich
+        Willkommen in der Ergotherapie Mensch/ich!
       </h1>
       <h1 class="mb-5 handwritten shrink-menschlich sm:hidden">
         <span class="text-3xl"> Willkommen bei </span>
@@ -22,16 +22,10 @@
       </span>
       <div class="flex-col gap-3 hidden sm:flex">
         <p>
-          Genau hier setzen wir an. Wir begleiten Sie dabei, Ihre
-          Selbstständigkeit zurückzugewinnen und Ihre Gesundheit aktiv
-          mitzugestalten.
+          Bei uns erwartet Sie ein Ort für Gesundheit, Entwicklung und
+          Menschlichkeit. Der Mensch als "Ich" mit all seinen Facetten steht bei
+          uns im Vordergrund. Als Patient*in und als Mitarbeiter*in.
         </p>
-        <p>
-          Sie kennen es vielleicht: Eine Verletzung, eine Erkrankung – und
-          plötzlich ist der Alltag nicht mehr der gleiche. Neben körperlichen
-          Beschwerden kommen Unsicherheiten:
-        </p>
-        <p>Was darf ich tun? Wie kann ich meine Genesung unterstützen?</p>
       </div>
 
       <!-- <div class="flex gap-3">
@@ -45,7 +39,7 @@
       :src="heroImage.src"
       aria-hidden
       alt=""
-      class="absolute z-0 md:right-20 sm:-bottom-60 -bottom-20 opacity-70"
+      class="absolute z-0 md:right-20 sm:-bottom-60 -bottom-20 transition fade-in"
       style="fill: var(--color-neutral-100)"
     />
   </section>
@@ -81,5 +75,19 @@
   .shrink-menschlich {
     font-size: clamp(3.25rem, 10vw, 4rem);
     line-height: 1.3;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 3000ms;
+    transition: ease-in;
   }
 </style>

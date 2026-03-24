@@ -1,5 +1,5 @@
 <template>
-  <section id="leistungen" class="flex flex-col lg:items-center">
+  <section id="leistungen" class="flex flex-col lg:items-center fade-in">
     <div class="text-center relative px-3 max-w-5xl">
       <h2 class="text-4xl font-bold text-primary-600 mb-3">
         Unsere Leistungen
@@ -82,7 +82,7 @@
     {
       title: "Geriatrie",
       description:
-        "Förderung von Kindern mit Entwicklungsverzögerungen, Wahrnehmungsstörungen oder motorischen Schwierigkeiten für eine optimale Entwicklung.",
+        "Erhalt und Verbesserung alltagsrelevanter Kompetenzen und (Re)Integration in das soziale Umfeld bei neurologischen Erkrankungen wie z.B. Demenz.",
       illustration: imgGeriatrie.src,
       alt: "Zeichnung eines Seniorenpärchens.",
     },
@@ -92,5 +92,19 @@
 <style scoped>
   section {
     scroll-margin-top: 130px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 3000ms;
+    transition: ease-in;
   }
 </style>

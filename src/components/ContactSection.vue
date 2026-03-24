@@ -5,11 +5,13 @@
         Kontakt
       </h2>
       <p class="text-center">
-        Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? <br />
-        Wir sind für Sie da!
+        Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir sind für
+        Sie da! <br />Behandlungen finden nur mit (privat)ärztlicher Verordnung
+        statt. Präventivangebote sind hiervon ausgenommen und selbst zu zahlen.
       </p>
+      <p></p>
       <div
-        class="flex flex-col sm:flex-row m-auto w-80 sm:w-full flex-wrap gap-5 sm:ps-0 ps-10"
+        class="flex flex-col sm:flex-row m-auto w-80 sm:w-full flex-wrap gap-5 sm:ps-0 ps-10 justify-center"
       >
         <div class="flex p-1">
           <TelephoneIcon class="text-primary-600 m-3" />
@@ -48,6 +50,14 @@
           </div>
         </div>
       </div>
+      <p class="bg-neutral-300 rounded-2xl p-3">
+        <b>Anfahrt:</b> vom S Spindlersfeld oder S Adlershof mit der Tram 63 bis
+        "Marktplatz Adlershof" zu Fuß vom S Adlershof in ca. 10min <br /><br />
+        <b>Parkplätze sind in der Umgebung vorhanden.</b> Das Gebäude ist
+        barrierearm mit einer Rampe außen, sowie einem Aufzug innen
+        ausgestattet. Sollten Sie weitere Unterstützung benötigen, sprechen Sie
+        uns bitte darauf an!
+      </p>
     </div>
   </section>
 </template>
