@@ -1,7 +1,7 @@
 <template>
   <section id="überuns" class="flex justify-center relative px-3">
     <div class="flex flex-col max-w-5xl gap-1">
-      <h2 class="text-4xl font-bold text-primary-600 mb-3">
+      <h2 class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3">
         Unsere Philosophie
       </h2>
       <p class="font-bold">

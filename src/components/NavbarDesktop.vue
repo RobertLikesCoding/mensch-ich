@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <a href="/#page-top">
+    <a href="/#page-top" class="flex-1">
       <img :src="imgLogo.src" alt="Logo der Ergotherapie Mensch/ich." />
     </a>
-    <ul class="flex gap-5 md:gap-10 items-center">
+    <ul class="flex gap-5 md:gap-10 items-center justify-evenly flex-2">
       <li class="hover:underline underline-offset-5">
         <a href="/#leistungen">Leistungen</a>
       </li>

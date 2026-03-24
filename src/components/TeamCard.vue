@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col w-full sm:w-100 rounded-2xl bg-neutral-100 shadow-lg max-w-80"
+    class="flex flex-col w-full sm:w-100 rounded-2xl bg-neutral-100 shadow-lg max-w-100"
   >
     <!-- <img
       :src="imgPath"
@@ -9,10 +9,10 @@
     /> -->
     <div class="flex flex-col gap-3 p-3 py-5">
       <div>
-        <h3 class="text-2xl font-bold text-primary-600">
+        <h3 class="text-3xl font-bold text-primary-600">
           {{ memberInfo.name }}
         </h3>
-        <h4 class="text-xl">{{ memberInfo.titel }}</h4>
+        <h4 class="text-2xl">{{ memberInfo.titel }}</h4>
       </div>
       <!-- <div class="flex flex-wrap gap-1">
         <span

@@ -1,7 +1,9 @@
 <template>
   <section id="kontakt" class="flex justify-center relative px-3">
     <div class="flex flex-col gap-5 max-w-5xl">
-      <h2 class="text-4xl font-bold text-primary-600 mb-3 text-center">
+      <h2
+        class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3 text-center"
+      >
         Kontakt
       </h2>
       <p class="text-center">

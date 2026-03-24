@@ -7,7 +7,7 @@
         <img
           :src="imgLogo.src"
           alt="Logo der Ergotherapie Mensch/ich."
-          class="h-20 ps-5"
+          class="h-20 ps-3"
         />
       </a>
 

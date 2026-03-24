@@ -1,7 +1,7 @@
 <template>
   <section id="leistungen" class="flex flex-col lg:items-center fade-in">
     <div class="text-center relative px-3 max-w-5xl">
-      <h2 class="text-4xl font-bold text-primary-600 mb-3">
+      <h2 class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3">
         Unsere Leistungen
       </h2>
       <p>

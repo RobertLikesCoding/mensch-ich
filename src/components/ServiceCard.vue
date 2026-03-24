@@ -1,7 +1,7 @@
 <template>
   <div
-    class="px-3 py-5 bg-linear-to-br from-[#5D7E65] via-[#5D7E65] to-[#4A6A52] rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-64 shrink-0 shadow-xl gap-5"
-    style="height: 24rem"
+    class="px-3 py-5 bg-linear-to-br from-[#5D7E65] via-[#5D7E65] to-[#4A6A52] rounded-2xl text-neutral-100 flex flex-col justify-evenly items-center text-center w-78 shrink-0 shadow-xl gap-8"
+    style="height: 26rem"
   >
     <img :src="props.img" :alt="props.alt" class="flex-1" loading="lazy" />
 
