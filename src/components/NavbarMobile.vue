@@ -1,28 +1,31 @@
 <template>
-  <div>
-    <a href="/#page-top">
-      <img
-        :src="imgLogo.src"
-        alt="Logo der Ergotherapie Mensch/ich."
-        class="h-20 ps-5"
-      />
-    </a>
-
-    <button
-      @click="isDropdownOpen = !isDropdownOpen"
-      :class="`me-5 p-2 sm:hidden ${isDropdownOpen ? 'burger-close' : 'burger-toggle'}`"
-      :aria-expanded="isDropdownOpen"
-      :aria-label="isDropdownOpen ? 'Menü schließen' : 'Menü öffnen'"
+  <nav>
+    <div
+      class="flex justify-between items-center w-full z-10 bg-neutral-100 py-2"
     >
-      <span class="bg-neutral-900"></span>
-      <span class="bg-neutral-900"></span>
-      <span class="bg-neutral-900"></span>
-    </button>
+      <a href="/#page-top">
+        <img
+          :src="imgLogo.src"
+          alt="Logo der Ergotherapie Mensch/ich."
+          class="h-20 ps-5"
+        />
+      </a>
 
-    <nav
+      <button
+        @click="isDropdownOpen = !isDropdownOpen"
+        :class="`me-5 p-2 sm:hidden ${isDropdownOpen ? 'burger-close' : 'burger-toggle'}`"
+        :aria-expanded="isDropdownOpen"
+        :aria-label="isDropdownOpen ? 'Menü schließen' : 'Menü öffnen'"
+      >
+        <span class="bg-neutral-900"></span>
+        <span class="bg-neutral-900"></span>
+        <span class="bg-neutral-900"></span>
+      </button>
+    </div>
+    <div
       :class="[
-        'absolute w-full text-center transition-all duration-400 top-22',
-        !isDropdownOpen && 'opacity-0',
+        'absolute w-full text-center transition-all duration-800',
+        isDropdownOpen ? 'top-22' : '-top-64',
       ]"
     >
       <ul class="flex flex-col gap-5 p-5 bg-neutral-100 w-full">
@@ -59,8 +62,8 @@
           />
         </li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script setup lang="ts">
@@ -77,8 +80,8 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: 42px;
-    height: 40px;
+    width: 46px;
+    height: 41px;
     cursor: pointer;
 
     span {
