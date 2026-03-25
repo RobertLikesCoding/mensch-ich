@@ -78,3 +78,17 @@ body {
 .handwritten {
   font-family: "Beth Ellen", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3000ms;
+  transition: ease-in;
+}

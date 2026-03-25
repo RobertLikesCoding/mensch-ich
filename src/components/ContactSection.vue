@@ -45,7 +45,7 @@
             <p class="text-primary-600">Öffnungszeiten</p>
             <p>
               Mo - Do: 09:00 - 18:00 Uhr <br />
-              Fr: 09:00 - 16:00 Uhr <br />
+              Fr: 09:00 - 14:00 Uhr <br />
               Sa - So: Geschlossen <br />
               Termine nur nach Vereinbarung
             </p>

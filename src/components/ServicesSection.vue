@@ -93,18 +93,4 @@
   section {
     scroll-margin-top: 130px;
   }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn 3000ms;
-    transition: ease-in;
-  }
 </style>

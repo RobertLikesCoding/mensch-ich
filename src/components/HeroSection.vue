@@ -9,12 +9,12 @@
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
       >
-        Willkommen in der Ergotherapie Mensch/ich!
+        Willkommen in der Ergotherapie Mensch/ich
       </h1>
 
       <h1 class="mb-5 handwritten sm:hidden flex flex-col gap-1">
         <p class="text-2xl shrink-welcome">Willkommen in der Ergotherapie</p>
-        <span class="shrink-menschlich"> Mensch/ich! </span>
+        <span class="shrink-menschlich"> Mensch/ich</span>
       </h1>
 
       <span class="sm:text-2xl">
@@ -70,19 +70,5 @@
   .shrink-menschlich {
     font-size: clamp(3rem, 10vw, 4rem);
     line-height: 1.3;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn 3000ms;
-    transition: ease-in;
   }
 </style>
