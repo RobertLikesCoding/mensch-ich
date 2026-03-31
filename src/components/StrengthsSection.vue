@@ -17,7 +17,7 @@
         <div class="text-center text-neutral-100 text-shadow-lg sm:w-72 w-full">
           <h4 class="text-2xl font-bold mb-3">Individuelle Beratung</h4>
           <p>
-            Strukturierte, klientenzentrierte Behandlungskonzepte mit
+            Strukturierte, individuelle Behandlungskonzepte mit
             transparenten Therapiezielen
           </p>
         </div>

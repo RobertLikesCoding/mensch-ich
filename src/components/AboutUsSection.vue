@@ -4,9 +4,9 @@
       <h2 class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3">
         Unsere Philosophie
       </h2>
-      <p class="font-bold">
-        Ein Ort der Gesundheit, Entwicklung und Menschlichkeit
-      </p>
+      <h3 class="font-bold">
+        Ein Ort der Gesundheit, Entwicklung und Menschlichkeit in Adlershof
+      </h3>
       <br />
       <p>
         Ergotherapie bedeutet für uns, Menschen darin zu unterstützen, ihren

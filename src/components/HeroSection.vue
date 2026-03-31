@@ -17,11 +17,10 @@
         <span class="shrink-menschlich"> Mensch/ich</span>
       </h1>
 
-      <span class="sm:text-2xl">
-        Bei uns erwartet Sie ein Ort für Gesundheit, Entwicklung und
-        Menschlichkeit. Der Mensch als "Ich" mit all seinen Facetten steht bei
-        uns im Vordergrund. Als Patient*in und als Mitarbeiter*in.
-      </span>
+      <h2 class="sm:text-2xl">
+        In unserer Praxis in Berlin-Adlershof erwartet Sie ein Ort für
+        Gesundheit, Entwicklung und Menschlichkeit. Wir freuen uns auf Sie.
+      </h2>
 
       <!-- <div class="flex gap-3">
         <Button label="Kontakt aufnehmen" to="/#kontakt" />

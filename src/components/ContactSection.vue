@@ -15,21 +15,21 @@
       <div
         class="flex flex-col sm:flex-row m-auto w-80 sm:w-full flex-wrap gap-5 sm:ps-0 ps-10 justify-center"
       >
-        <div class="flex p-1">
+        <div class="flex p-1" aria-label="Telefonkontakt">
           <TelephoneIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">Telefon</p>
             +49152 2880 5368
           </div>
         </div>
-        <div class="flex p-1">
+        <div class="flex p-1" aria-label="Emailkontakt">
           <MailIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">E-Mail</p>
             ergotherapie-menschlich@posteo.de
           </div>
         </div>
-        <div class="flex p-1">
+        <div class="flex p-1" aria-label="Adresse & Anfahrt">
           <LocatorIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">Adresse</p>
@@ -39,7 +39,7 @@
             </p>
           </div>
         </div>
-        <div class="flex p-1">
+        <div class="flex p-1" aria-label="Öffnungszeiten">
           <ClockIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">Öffnungszeiten</p>
@@ -53,8 +53,9 @@
         </div>
       </div>
       <p class="bg-neutral-300 rounded-2xl p-3">
-        <b>Anfahrt:</b> vom S Spindlersfeld oder S Adlershof mit der Tram 63 bis
-        "Marktplatz Adlershof" zu Fuß vom S Adlershof in ca. 10min <br /><br />
+        <b>Anfahrt:</b> Zu unserer Ergotherapie Praxis in kommen Sie vom S
+        Spindlersfeld oder S Adlershof mit der Tram 63 bis "Marktplatz
+        Adlershof". Zu Fuß vom S Adlershof in ca. 10min <br /><br />
         <b>Parkplätze sind in der Umgebung vorhanden.</b> Das Gebäude ist
         barrierearm mit einer Rampe außen, sowie einem Aufzug innen
         ausgestattet. Sollten Sie weitere Unterstützung benötigen, sprechen Sie
