@@ -53,7 +53,7 @@
         </div>
       </div>
       <p class="bg-neutral-300 rounded-2xl p-3">
-        <b>Anfahrt:</b> Zu unserer Ergotherapie Praxis in kommen Sie vom S
+        <b>Anfahrt:</b> Zu unserer Ergotherapie Praxis in Adlershof kommen Sie vom S
         Spindlersfeld oder S Adlershof mit der Tram 63 bis "Marktplatz
         Adlershof". Zu Fuß vom S Adlershof in ca. 10min <br /><br />
         <b>Parkplätze sind in der Umgebung vorhanden.</b> Das Gebäude ist
