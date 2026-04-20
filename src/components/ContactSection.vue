@@ -4,12 +4,10 @@
       <h2
         class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3 text-center"
       >
-        Kontakt
+        {{ t("contact.heading") }}
       </h2>
       <p class="text-center">
-        Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir sind für
-        Sie da! <br />Behandlungen finden nur mit (privat)ärztlicher Verordnung
-        statt. Präventivangebote sind hiervon ausgenommen und selbst zu zahlen.
+        <span v-html="t('contact.intro')"></span>
       </p>
       <p></p>
       <div
@@ -18,48 +16,34 @@
         <div class="flex p-1" aria-label="Telefonkontakt">
           <TelephoneIcon class="text-primary-600 m-3" />
           <div>
-            <p class="text-primary-600">Telefon</p>
+            <p class="text-primary-600">{{ t("contact.phone.label") }}</p>
             +49152 2880 5368
           </div>
         </div>
         <div class="flex p-1" aria-label="Emailkontakt">
           <MailIcon class="text-primary-600 m-3" />
           <div>
-            <p class="text-primary-600">E-Mail</p>
+            <p class="text-primary-600">{{ t("contact.email.label") }}</p>
             ergotherapie-menschlich@posteo.de
           </div>
         </div>
         <div class="flex p-1" aria-label="Adresse & Anfahrt">
           <LocatorIcon class="text-primary-600 m-3" />
           <div>
-            <p class="text-primary-600">Adresse</p>
-            <p>
-              Dörpfeldstraße 52 <br />
-              12489 Berlin
-            </p>
+            <p class="text-primary-600">{{ t("contact.address.label") }}</p>
+            <p v-html="t('contact.address')"></p>
           </div>
         </div>
         <div class="flex p-1" aria-label="Öffnungszeiten">
           <ClockIcon class="text-primary-600 m-3" />
           <div>
-            <p class="text-primary-600">Öffnungszeiten</p>
-            <p>
-              Mo - Do: 09:00 - 18:00 Uhr <br />
-              Fr: 09:00 - 14:00 Uhr <br />
-              Sa - So: Geschlossen <br />
-              Termine nur nach Vereinbarung
-            </p>
+            <p class="text-primary-600">{{ t("contact.opening.label") }}</p>
+            <p v-html="t('contact.opening')"></p>
           </div>
         </div>
       </div>
       <p class="bg-neutral-300 rounded-2xl p-3">
-        <b>Anfahrt:</b> Zu unserer Ergotherapie Praxis in Adlershof kommen Sie vom S
-        Spindlersfeld oder S Adlershof mit der Tram 63 bis "Marktplatz
-        Adlershof". Zu Fuß vom S Adlershof in ca. 10min <br /><br />
-        <b>Parkplätze sind in der Umgebung vorhanden.</b> Das Gebäude ist
-        barrierearm mit einer Rampe außen, sowie einem Aufzug innen
-        ausgestattet. Sollten Sie weitere Unterstützung benötigen, sprechen Sie
-        uns bitte darauf an!
+        <span v-html="t('contact.route')"></span>
       </p>
     </div>
   </section>
@@ -70,6 +54,8 @@
   import LocatorIcon from "./UI/LocatorIcon.vue";
   import MailIcon from "./UI/MailIcon.vue";
   import TelephoneIcon from "./UI/TelephoneIcon.vue";
+  import { useTranslations } from "../i18n/utils";
+  const t = useTranslations();
 </script>
 
 <style scoped>

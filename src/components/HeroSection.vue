@@ -1,25 +1,23 @@
-<script setup lang="ts">
-  import Button from "./UI/Button.vue";
-  import heroImage from "../assets/kopf_logo.svg";
-</script>
-
 <template>
   <section id="hero" class="flex items-center overflow-hidden relative">
     <div class="m-auto flex flex-col items-start gap-8 z-10 p-3 max-w-5xl">
       <h1
         class="text-7xl leading-tight handwritten heading-desktop hidden sm:inline"
       >
-        Willkommen in der Ergotherapie Mensch/ich
+        {{ t("hero.desktop.heading") }}
       </h1>
 
       <h1 class="mb-5 handwritten sm:hidden flex flex-col gap-1">
-        <p class="text-2xl shrink-welcome">Willkommen in der Ergotherapie</p>
-        <span class="shrink-menschlich"> Mensch/ich</span>
+        <p class="text-2xl shrink-welcome">
+          {{ t("hero.mobile.heading.pt1") }}
+        </p>
+        <span class="shrink-menschlich">
+          {{ t("hero.mobile.heading.pt2") }}</span
+        >
       </h1>
 
       <h2 class="sm:text-2xl">
-        In unserer Praxis in Berlin-Adlershof erwartet Sie ein Ort für
-        Gesundheit, Entwicklung und Menschlichkeit. Wir freuen uns auf Sie.
+        {{ t("hero.subheading") }}
       </h2>
 
       <!-- <div class="flex gap-3">
@@ -38,6 +36,14 @@
     />
   </section>
 </template>
+
+<script setup lang="ts">
+  import Button from "./UI/Button.vue";
+  import heroImage from "../assets/kopf_logo.svg";
+  import { useTranslations } from "../i18n/utils";
+
+  const t = useTranslations();
+</script>
 
 <style lang="css" scoped>
   section {

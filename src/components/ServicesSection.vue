@@ -2,12 +2,10 @@
   <section id="leistungen" class="flex flex-col lg:items-center fade-in">
     <div class="text-center relative px-3 max-w-5xl">
       <h2 class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3">
-        Unsere Leistungen
+        {{ t("services.heading") }}
       </h2>
       <p>
-        Wir bieten Ihnen ein breites Spektrum an ergotherapeutischen Einzel- und
-        Gruppenbehandlungen für alle Altersgruppen – kassenärztliche Leistungen
-        und Selbstzahlerangebote.
+        {{ t("services.intro") }}
       </p>
 
       <!-- decorative shapes -->
@@ -56,35 +54,33 @@
   import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgPädiatrie from "../assets/Pädiatrie.svg";
   import ServiceCard from "./ServiceCard.vue";
+  import { useTranslations } from "../i18n/utils";
+  const t = useTranslations();
 
   const services = [
     {
-      title: "Orthopädie",
-      description:
-        "Therapie nach Verletzungen, Operationen oder bei chronischen Schmerzen zur Wiederherstellung der Beweglichkeit und Funktionsfähigkeit.",
+      title: t("services.orthopaedie.title"),
+      description: t("services.orthopaedie.desc"),
       illustration: imgOrthopädie.src,
-      alt: "Zeichnung einer Handmassage.",
+      alt: t("services.orthopaedie.alt"),
     },
     {
-      title: "Pädiatrie",
-      description:
-        "Förderung von Kindern mit Entwicklungsverzögerungen, Wahrnehmungsstörungen oder motorischen Schwierigkeiten für eine optimale Entwicklung.",
+      title: t("services.paediatrie.title"),
+      description: t("services.paediatrie.desc"),
       illustration: imgPädiatrie.src,
-      alt: "Zeichnung von drei Hände haltenden Kindern.",
+      alt: t("services.paediatrie.alt"),
     },
     {
-      title: "Psychiatrie",
-      description:
-        "Unterstützung bei psychischen Erkrankungen zur Stärkung der Alltagskompetenzen und Förderung der sozialen Teilhabe.",
+      title: t("services.psychiatrie.title"),
+      description: t("services.psychiatrie.desc"),
       illustration: imgPsychatrie.src,
-      alt: "Zeichnung eines Menschens mit einer negativen Gedankenblase.",
+      alt: t("services.psychiatrie.alt"),
     },
     {
-      title: "Geriatrie",
-      description:
-        "Erhalt und Verbesserung alltagsrelevanter Kompetenzen und (Re)Integration in das soziale Umfeld bei neurologischen Erkrankungen wie z.B. Demenz.",
+      title: t("services.geriatrie.title"),
+      description: t("services.geriatrie.desc"),
       illustration: imgGeriatrie.src,
-      alt: "Zeichnung eines Seniorenpärchens.",
+      alt: t("services.geriatrie.alt"),
     },
   ];
 </script>
