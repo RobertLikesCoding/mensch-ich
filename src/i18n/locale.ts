@@ -82,7 +82,7 @@ export const locale = {
     // ContactSection
     "contact.heading": "Kontakt",
     "contact.intro":
-      "Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir sind für Sie da! <br />Behandlungen finden nur mit (privat)ärztlicher Verordnung statt. Präventivangebote sind hiervon ausgenommen und selbst zu zahlen.",
+      "Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir sind für Sie da! <br />Behandlungen finden nur mit ärztlicher Verordnung statt. Präventivangebote sind hiervon ausgenommen und selbst zu zahlen.",
     "contact.phone.label": "Telefon",
     "contact.email.label": "E-Mail",
     "contact.address.label": "Adresse",
@@ -175,7 +175,7 @@ export const locale = {
     // ContactSection
     "contact.heading": "Contact",
     "contact.intro":
-      "Do you have questions or would you like to make an appointment? We are here for you! <br />Treatments are only available with a (private) medical prescription. Preventive offers are excluded and must be paid for privately.",
+      "Do you have questions or would you like to make an appointment? We are here for you! <br />Treatments are only available with a medical prescription. Preventive offers are excluded and must be paid for privately.",
     "contact.phone.label": "Phone",
     "contact.email.label": "E-mail",
     "contact.address.label": "Address",

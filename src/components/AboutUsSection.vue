@@ -21,23 +21,23 @@
       </p>
       <br />
       <ul class="mt-3">
-        <li class="flex gap-3 py-1">
+        <li class="flex gap-3 py-1 items-center">
           <CheckCircleIcon class="h-6 w-6 shrink-0 text-secondary-600" />
           <span>{{ t("about.list.1") }}</span>
         </li>
-        <li class="flex gap-3 py-1">
+        <li class="flex gap-3 py-1 items-center">
           <CheckCircleIcon class="h-6 w-6 shrink-0 text-secondary-600" />
           <span>{{ t("about.list.2") }}</span>
         </li>
-        <li class="flex gap-3 py-1">
+        <li class="flex gap-3 py-1 items-center">
           <CheckCircleIcon class="h-6 w-6 shrink-0 text-secondary-600" />
           <span>{{ t("about.list.3") }}</span>
         </li>
-        <li class="flex gap-3 py-1">
+        <li class="flex gap-3 py-1 items-center">
           <CheckCircleIcon class="h-6 w-6 shrink-0 text-secondary-600" />
           <span>{{ t("about.list.4") }}</span>
         </li>
-        <li class="flex gap-3 py-1">
+        <li class="flex gap-3 py-1 items-center">
           <CheckCircleIcon class="h-6 w-6 shrink-0 text-secondary-600" />
           <span>{{ t("about.list.5") }}</span>
         </li>

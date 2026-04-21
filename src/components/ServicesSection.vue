@@ -49,40 +49,44 @@
 </template>
 
 <script setup lang="ts">
+  import { computed } from "vue";
   import imgGeriatrie from "../assets/Geriatrie.svg";
   import imgOrthopädie from "../assets/Orthopädie.svg";
   import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgPädiatrie from "../assets/Pädiatrie.svg";
-  import ServiceCard from "./ServiceCard.vue";
   import { useTranslations } from "../i18n/utils";
+  import ServiceCard from "./ServiceCard.vue";
+
   const t = useTranslations();
 
-  const services = [
-    {
-      title: t("services.orthopaedie.title"),
-      description: t("services.orthopaedie.desc"),
-      illustration: imgOrthopädie.src,
-      alt: t("services.orthopaedie.alt"),
-    },
-    {
-      title: t("services.paediatrie.title"),
-      description: t("services.paediatrie.desc"),
-      illustration: imgPädiatrie.src,
-      alt: t("services.paediatrie.alt"),
-    },
-    {
-      title: t("services.psychiatrie.title"),
-      description: t("services.psychiatrie.desc"),
-      illustration: imgPsychatrie.src,
-      alt: t("services.psychiatrie.alt"),
-    },
-    {
-      title: t("services.geriatrie.title"),
-      description: t("services.geriatrie.desc"),
-      illustration: imgGeriatrie.src,
-      alt: t("services.geriatrie.alt"),
-    },
-  ];
+  const services = computed(() => {
+    return [
+      {
+        title: t("services.orthopaedie.title"),
+        description: t("services.orthopaedie.desc"),
+        illustration: imgOrthopädie.src,
+        alt: t("services.orthopaedie.alt"),
+      },
+      {
+        title: t("services.paediatrie.title"),
+        description: t("services.paediatrie.desc"),
+        illustration: imgPädiatrie.src,
+        alt: t("services.paediatrie.alt"),
+      },
+      {
+        title: t("services.psychiatrie.title"),
+        description: t("services.psychiatrie.desc"),
+        illustration: imgPsychatrie.src,
+        alt: t("services.psychiatrie.alt"),
+      },
+      {
+        title: t("services.geriatrie.title"),
+        description: t("services.geriatrie.desc"),
+        illustration: imgGeriatrie.src,
+        alt: t("services.geriatrie.alt"),
+      },
+    ];
+  });
 </script>
 
 <style scoped>
