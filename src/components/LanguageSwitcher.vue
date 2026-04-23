@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex me-1">
     <a href="/" :class="[lang === 'de' && 'underline underline-offset-3']">
       DE
     </a>

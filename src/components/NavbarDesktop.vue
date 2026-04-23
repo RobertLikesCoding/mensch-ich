@@ -15,7 +15,7 @@
       <li class="hover:underline underline-offset-5">
         <a :href="buildLocalePath('#team')">{{ t("nav.team") }}</a>
       </li>
-      <li class="flex items-center gap-1">
+      <li class="flex items-center">
         <LanguageSwitcher />
       </li>
       <li>

@@ -3,7 +3,7 @@
     <div
       class="flex justify-between items-center w-full z-10 bg-neutral-100 py-2"
     >
-      <a href="/#page-top">
+      <a :href="buildLocalePath('#page-top')">
         <img
           :src="imgLogo.src"
           alt="Logo der Ergotherapie Mensch/ich."
@@ -32,32 +32,35 @@
         <li>
           <a
             @click="isDropdownOpen = false"
-            href="/#leistungen"
+            :href="buildLocalePath('#leistungen')"
             class="active:text-shadow-lg"
-            >Leistungen</a
+            >{{ t("nav.services") }}</a
           >
         </li>
         <li>
           <a
             @click="isDropdownOpen = false"
-            href="/#überuns"
+            :href="buildLocalePath('#überuns')"
             class="active:text-shadow-lg"
-            >Über uns</a
+            >{{ t("nav.about_us") }}</a
           >
         </li>
         <li>
           <a
             @click="isDropdownOpen = false"
-            href="/#team"
+            :href="buildLocalePath('#team')"
             class="active:text-shadow-lg"
-            >Team</a
+            >{{ t("nav.team") }}</a
           >
+        </li>
+        <li class="flex justify-center items-center">
+          <LanguageSwitcher />
         </li>
         <li class="m-auto">
           <Button
             @click="isDropdownOpen = false"
-            label="Kontakt"
-            to="/#kontakt"
+            :label="t('nav.button.contact')"
+            :to="buildLocalePath('#kontakt')"
             style="height: 30px; width: fit-content"
           />
         </li>
@@ -70,7 +73,10 @@
   import { ref } from "vue";
   import imgLogo from "../assets/logo_menschlich.svg";
   import Button from "./UI/Button.vue";
+  import { useTranslations, buildLocalePath } from "../i18n/languageUtils";
+  import LanguageSwitcher from "./LanguageSwitcher.vue";
 
+  const t = useTranslations();
   const isDropdownOpen = ref<boolean>(false);
 </script>
 
