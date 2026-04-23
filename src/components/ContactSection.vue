@@ -38,7 +38,15 @@
           <ClockIcon class="text-primary-600 m-3" />
           <div>
             <p class="text-primary-600">{{ t("contact.opening.label") }}</p>
-            <p v-html="t('contact.opening')"></p>
+            <p>
+              {{ t("contact.opening.monToThu") }} {{ MondayToThursdayStart }} -
+              {{ MondayToThursdayEnd }} {{ lang === "de" ? "Uhr" : null }}
+            </p>
+            <p>
+              {{ t("contact.opening.friday") }} {{ FridayStart }} -
+              {{ FridayEnd }} {{ lang === "de" ? "Uhr" : null }}
+            </p>
+            <p v-html="t('contact.opening.weekend')"></p>
           </div>
         </div>
       </div>
@@ -54,8 +62,18 @@
   import LocatorIcon from "./UI/LocatorIcon.vue";
   import MailIcon from "./UI/MailIcon.vue";
   import TelephoneIcon from "./UI/TelephoneIcon.vue";
-  import { useTranslations } from "../i18n/utils";
+  import { lang, useTranslations } from "../i18n/utils";
   const t = useTranslations();
+
+  const formatter = new Intl.DateTimeFormat(lang.value, {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const MondayToThursdayStart = formatter.format(new Date(0, 0, 0, 9, 0));
+  const MondayToThursdayEnd = formatter.format(new Date(0, 0, 0, 18, 0));
+  const FridayStart = formatter.format(new Date(0, 0, 0, 9, 0));
+  const FridayEnd = formatter.format(new Date(0, 0, 0, 14, 0));
 </script>
 
 <style scoped>

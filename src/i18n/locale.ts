@@ -88,8 +88,10 @@ export const locale = {
     "contact.address.label": "Adresse",
     "contact.address": "Dörpfeldstraße 52 <br />12489 Berlin",
     "contact.opening.label": "Öffnungszeiten",
-    "contact.opening":
-      "Mo - Do: 09:00 - 18:00 Uhr <br />Fr: 09:00 - 14:00 Uhr <br />Sa - So: Geschlossen <br />Termine nur nach Vereinbarung",
+    "contact.opening.monToThu": "Mo - Do:",
+    "contact.opening.friday": "Fr:",
+    "contact.opening.weekend":
+      "Sa - So: Geschlossen <br />Termine nur nach Vereinbarung",
     "contact.route":
       '<b>Anfahrt:</b> Zu unserer Ergotherapie Praxis in Adlershof kommen Sie vom S Spindlersfeld oder S Adlershof mit der Tram 63 bis "Marktplatz Adlershof". Zu Fuß vom S Adlershof in ca. 10min <br /><br /><b>Parkplätze sind in der Umgebung vorhanden.</b> Das Gebäude ist barrierearm mit einer Rampe außen, sowie einem Aufzug innen ausgestattet. Sollten Sie weitere Unterstützung benötigen, sprechen Sie uns bitte darauf an!',
   },
@@ -181,8 +183,10 @@ export const locale = {
     "contact.address.label": "Address",
     "contact.address": "Dörpfeldstraße 52 <br />12489 Berlin",
     "contact.opening.label": "Opening hours",
-    "contact.opening":
-      "Mon - Thu: 09:00 - 18:00 <br />Fri: 09:00 - 14:00 <br />Sat - Sun: Closed <br />Appointments by arrangement only",
+    "contact.opening.monToThu": "Mon - Thu:",
+    "contact.opening.friday": "Fri:",
+    "contact.opening.weekend":
+      "Sat - Sun: Closed <br />Appointments by arrangement only",
     "contact.route":
       "<b>Directions:</b> You can reach our occupational therapy practice in Adlershof from S Spindlersfeld or S Adlershof with tram 63 to 'Marktplatz Adlershof'. On foot from S Adlershof in about 10min <br /><br /><b>Parking spaces are available nearby.</b> The building is accessible with a ramp outside and an elevator inside. If you need further assistance, please let us know!",
   },

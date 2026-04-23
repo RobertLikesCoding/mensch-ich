@@ -30,7 +30,7 @@
 
     <!-- decorative shapes -->
     <div
-      class="bg-linear-to-br from-[#5D7E65]/90 via-[#5D7E65] to-[#3A543F]/95 absolute -z-10 md:-top-10 -top-20 -left-20 drop-shadow-xl h-460 md:h-240 sm:h-200 -rotate-3 w-500 max-w-none"
+      class="bg-linear-to-br from-[#5D7E65]/90 via-[#5D7E65] to-[#3A543F]/95 absolute -z-10 md:-top-10 -top-20 -left-20 drop-shadow-xl h-460 md:h-250 sm:h-200 -rotate-3 w-500 max-w-none"
     ></div>
   </section>
 </template>
