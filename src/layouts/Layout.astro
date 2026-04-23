@@ -3,6 +3,9 @@ import Footer from "../components/Footer.vue";
 import NavbarDesktop from "../components/NavbarDesktop.vue";
 import NavbarMobile from "../components/NavbarMobile.vue";
 import "../styles/global.css"; // imports tailwind to all pages using this layout
+import { getLangFromUrl, lang } from "../i18n/languageUtils";
+
+getLangFromUrl(Astro.url);
 
 const {
   title = "Ergotherapie Mensch/ich – Ihre Praxis in Adlershof",
@@ -12,7 +15,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang.value}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -38,7 +41,7 @@ const {
         class="sm:hidden flex justify-between w-full items-center gap-10 nav-height-mobile"
       />
     </header>
-    <main class="flex flex-col gap-22 nav-margin m-auto mb-16">
+    <main class="flex flex-col gap-24 nav-margin m-auto mb-16">
       <slot />
     </main>
     <Footer />

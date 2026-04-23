@@ -2,13 +2,11 @@
   <section id="team" class="flex justify-center relative px-3">
     <div class="max-w-5xl flex flex-col items-center gap-5">
       <div class="text-neutral-100 text-shadow-lg text-center">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-3">Unser Team</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-3">
+          {{ t("team.heading") }}
+        </h2>
         <p>
-          Wir sind zwei erfahrene Ergotherapeutinnen mit einer gemeinsamen
-          Vision: Eine moderne, sozial verantwortungsvolle Praxis schaffen, die
-          hohe fachliche Qualität und Menschlichkeit vereint. Bei uns steht die
-          Gesundheit sowohl der Patient*innen als auch der Mitarbeiter*innen im
-          Fokus. Denn nur gemeinsam sind wir ein starkes Team!
+          {{ t("team.intro") }}
         </p>
       </div>
       <!-- add team cards here -->
@@ -25,36 +23,24 @@
 
 <script setup lang="ts">
   import TeamCard from "./TeamCard.vue";
+  import { useTranslations } from "../i18n/languageUtils";
+  const t = useTranslations();
 
   const team = [
     {
-      name: "Corinna Baufeld",
-      titel: "Handtherapeutin",
-      skills: ["Ultraschallanwendung"],
-      description:
-        "Ich bin seit 2012 examinierte Ergotherapeutin und seitdem mit dem Schwerpunkt Handtherapie/ Schmerztherapie tätig. Mir ist es besonders wichtig, Patient*innen umfassend über ihre Diagnose aufzuklären und sie zur Selbsthilfe anzuleiten. Die Patient*innen aus der Behandlung zu entlassen mit gestärktem Selbstbewusstsein nach oder mit ihrer Diagnose den Alltag zu bewältigen, motiviert mich jedes Mal auf´s Neue.",
+      name: t("team.1.name"),
+      titel: t("team.1.title"),
+      skills: [t("team.1.skills")],
+      description: t("team.1.desc"),
       imgPath: "",
     },
     {
-      name: "Claudia Rothe",
-      titel: "Praxisanleiterin",
-      skills: ["Praxisanleiterin "],
-      description:
-        "Seit 2019 arbeite ich als examinierte Ergotherapeutin mit den Schwerpunkten Pädiatrie und Psychiatrie. In der Behandlung von Kindern lege ich großen Wert auf eine enge Kooperation mit den Eltern und Schulen/ Kitas. Kinder, aber auch psychisch erkrankte Menschen stehen im Mittelpunkt eines großen, sozialen Systems, das sie fördert oder behindert. Mit einem ganzheitlich Blick analysiere ich dieses System und behandle dann individuell.",
+      name: t("team.2.name"),
+      titel: t("team.2.title"),
+      skills: [t("team.2.skills")],
+      description: t("team.2.desc"),
       imgPath: "",
     },
-    // {
-    //   name: "Lilly Benduhn",
-    //   skills: [
-    //     "Sensorische Integrationstherapie",
-    //     "Respektare®",
-    //     "Praxismanagement",
-    //     "Ausbilderin (4 Jahre Erfahrung)",
-    //   ],
-    //   description:
-    //     "Claudia Rothe verfügt über fundiertes Wissen in Praxismanagement und der Entwicklung digitaler sowie mobiler Versorgungsangebote. Sie pflegt enge Kooperationen mit zwei Ausbildungsschulen und trägt aktiv zur Nachwuchsförderung bei.",
-    //   imgPath: "",
-    // },
   ];
 </script>
 

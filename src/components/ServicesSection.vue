@@ -2,12 +2,10 @@
   <section id="leistungen" class="flex flex-col lg:items-center fade-in">
     <div class="text-center relative px-3 max-w-5xl">
       <h2 class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3">
-        Unsere Leistungen
+        {{ t("services.heading") }}
       </h2>
       <p>
-        Wir bieten Ihnen ein breites Spektrum an ergotherapeutischen Einzel- und
-        Gruppenbehandlungen für alle Altersgruppen – kassenärztliche Leistungen
-        und Selbstzahlerangebote.
+        {{ t("services.intro") }}
       </p>
 
       <!-- decorative shapes -->
@@ -51,42 +49,44 @@
 </template>
 
 <script setup lang="ts">
+  import { computed } from "vue";
   import imgGeriatrie from "../assets/Geriatrie.svg";
   import imgOrthopädie from "../assets/Orthopädie.svg";
   import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgPädiatrie from "../assets/Pädiatrie.svg";
+  import { useTranslations } from "../i18n/languageUtils";
   import ServiceCard from "./ServiceCard.vue";
 
-  const services = [
-    {
-      title: "Orthopädie",
-      description:
-        "Therapie nach Verletzungen, Operationen oder bei chronischen Schmerzen zur Wiederherstellung der Beweglichkeit und Funktionsfähigkeit.",
-      illustration: imgOrthopädie.src,
-      alt: "Zeichnung einer Handmassage.",
-    },
-    {
-      title: "Pädiatrie",
-      description:
-        "Förderung von Kindern mit Entwicklungsverzögerungen, Wahrnehmungsstörungen oder motorischen Schwierigkeiten für eine optimale Entwicklung.",
-      illustration: imgPädiatrie.src,
-      alt: "Zeichnung von drei Hände haltenden Kindern.",
-    },
-    {
-      title: "Psychiatrie",
-      description:
-        "Unterstützung bei psychischen Erkrankungen zur Stärkung der Alltagskompetenzen und Förderung der sozialen Teilhabe.",
-      illustration: imgPsychatrie.src,
-      alt: "Zeichnung eines Menschens mit einer negativen Gedankenblase.",
-    },
-    {
-      title: "Geriatrie",
-      description:
-        "Erhalt und Verbesserung alltagsrelevanter Kompetenzen und (Re)Integration in das soziale Umfeld bei neurologischen Erkrankungen wie z.B. Demenz.",
-      illustration: imgGeriatrie.src,
-      alt: "Zeichnung eines Seniorenpärchens.",
-    },
-  ];
+  const t = useTranslations();
+
+  const services = computed(() => {
+    return [
+      {
+        title: t("services.orthopaedie.title"),
+        description: t("services.orthopaedie.desc"),
+        illustration: imgOrthopädie.src,
+        alt: t("services.orthopaedie.alt"),
+      },
+      {
+        title: t("services.paediatrie.title"),
+        description: t("services.paediatrie.desc"),
+        illustration: imgPädiatrie.src,
+        alt: t("services.paediatrie.alt"),
+      },
+      {
+        title: t("services.psychiatrie.title"),
+        description: t("services.psychiatrie.desc"),
+        illustration: imgPsychatrie.src,
+        alt: t("services.psychiatrie.alt"),
+      },
+      {
+        title: t("services.geriatrie.title"),
+        description: t("services.geriatrie.desc"),
+        illustration: imgGeriatrie.src,
+        alt: t("services.geriatrie.alt"),
+      },
+    ];
+  });
 </script>
 
 <style scoped>
