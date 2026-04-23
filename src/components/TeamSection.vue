@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
   import TeamCard from "./TeamCard.vue";
-  import { useTranslations } from "../i18n/utils";
+  import { useTranslations } from "../i18n/languageUtils";
   const t = useTranslations();
 
   const team = [

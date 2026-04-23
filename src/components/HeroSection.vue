@@ -40,7 +40,7 @@
 <script setup lang="ts">
   import Button from "./UI/Button.vue";
   import heroImage from "../assets/kopf_logo.svg";
-  import { useTranslations } from "../i18n/utils";
+  import { useTranslations } from "../i18n/languageUtils";
 
   const t = useTranslations();
 </script>

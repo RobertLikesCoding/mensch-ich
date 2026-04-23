@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import { locale } from "../i18n/locale";
+import { locale } from "./locale";
 
 export type SupportedLanguages = keyof typeof locale;
 const defaultLang = "de";
@@ -19,4 +19,8 @@ export function useTranslations() {
   return function t(key: keyof (typeof locale)[typeof lang.value]) {
     return locale[lang.value][key];
   };
+}
+
+export function buildLocalePath(path: string) {
+  return lang.value === "en" ? `/en/${path}` : path;
 }

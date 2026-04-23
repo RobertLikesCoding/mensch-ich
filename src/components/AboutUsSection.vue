@@ -58,7 +58,7 @@
 
 <script setup lang="ts">
   import CheckCircleIcon from "./UI/CheckCircleIcon.vue";
-  import { useTranslations } from "../i18n/utils";
+  import { useTranslations } from "../i18n/languageUtils";
   const t = useTranslations();
 </script>
 

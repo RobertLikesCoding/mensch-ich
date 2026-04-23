@@ -36,6 +36,6 @@
 </template>
 
 <script setup lang="ts">
-  import { useTranslations } from "../i18n/utils";
+  import { useTranslations } from "../i18n/languageUtils";
   const t = useTranslations();
 </script>

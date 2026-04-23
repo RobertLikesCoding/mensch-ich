@@ -62,7 +62,7 @@
   import LocatorIcon from "./UI/LocatorIcon.vue";
   import MailIcon from "./UI/MailIcon.vue";
   import TelephoneIcon from "./UI/TelephoneIcon.vue";
-  import { lang, useTranslations } from "../i18n/utils";
+  import { lang, useTranslations } from "../i18n/languageUtils";
   const t = useTranslations();
 
   const formatter = new Intl.DateTimeFormat(lang.value, {
