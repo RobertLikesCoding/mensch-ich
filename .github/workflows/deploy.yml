@@ -1,0 +1,50 @@
+name: Deploy to Production
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build Astro page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Astro page
+        run: npm run build
+      - name: FTP Deploy to Biohost
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          # ftp server
+          server: ${{ secrets.FTP_SERVER }}
+          # ftp username
+          username: ${{ secrets.FTP_USER }}
+          # ftp password
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Server port to connect to (read your web hosts docs)
+          port: # optional
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          # protocol: # optional
+          # Folder to upload from, must end with trailing slash /
+          local-dir: "dist/"
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: ${{ secrets.FTP_SERVERPATH }}
+          # Path and name of the state file - this file is used to track which files have been deployed
+          # state-name: # optional
+          # Prints which modifications will be made with current config options, but doesnt actually make any changes
+          dry-run: true
+          # An array of glob patterns, these files will not be included in the publish/delete process
+          # exclude: # optional
+          # How verbose should the information be - minimal, standard, or verbose
+          # log-level: # optional
+          # strict or loose
+          # security: # optional
+          # Timeout in milliseconds for FTP operations
+          # timeout: # optional
