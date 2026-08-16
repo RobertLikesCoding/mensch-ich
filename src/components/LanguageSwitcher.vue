@@ -10,7 +10,10 @@
   </div>
   <LanguageIcon />
 </template>
+
 <script setup lang="ts">
-  import { lang } from "../i18n/languageUtils";
   import LanguageIcon from "./UI/LanguageIcon.vue";
+  import type { SupportedLanguages } from "../i18n/languageUtils";
+
+  defineProps<{ lang: SupportedLanguages }>();
 </script>

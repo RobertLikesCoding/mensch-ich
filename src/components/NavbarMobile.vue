@@ -3,7 +3,7 @@
     <div
       class="flex justify-between items-center w-full z-10 bg-neutral-100 py-2"
     >
-      <a :href="buildLocalePath('#page-top')">
+      <a :href="buildLocalePath(lang, '#page-top')">
         <img
           :src="imgLogo.src"
           alt="Logo der Ergotherapie Mensch/ich."
@@ -32,7 +32,7 @@
         <li>
           <a
             @click="isDropdownOpen = false"
-            :href="buildLocalePath('#leistungen')"
+            :href="buildLocalePath(lang, '#leistungen')"
             class="active:text-shadow-lg"
             >{{ t("nav.services") }}</a
           >
@@ -40,7 +40,7 @@
         <li>
           <a
             @click="isDropdownOpen = false"
-            :href="buildLocalePath('#überuns')"
+            :href="buildLocalePath(lang, '#überuns')"
             class="active:text-shadow-lg"
             >{{ t("nav.about_us") }}</a
           >
@@ -48,19 +48,19 @@
         <li>
           <a
             @click="isDropdownOpen = false"
-            :href="buildLocalePath('#team')"
+            :href="buildLocalePath(lang, '#team')"
             class="active:text-shadow-lg"
             >{{ t("nav.team") }}</a
           >
         </li>
         <li class="flex justify-center items-center">
-          <LanguageSwitcher />
+          <LanguageSwitcher :lang="lang" />
         </li>
         <li class="m-auto">
           <Button
             @click="isDropdownOpen = false"
             :label="t('nav.button.contact')"
-            :to="buildLocalePath('#kontakt')"
+            :to="buildLocalePath(lang, '#kontakt')"
             style="height: 30px; width: fit-content"
           />
         </li>
@@ -73,10 +73,14 @@
   import { ref } from "vue";
   import imgLogo from "../assets/logo_menschlich.svg";
   import Button from "./UI/Button.vue";
-  import { useTranslations, buildLocalePath } from "../i18n/languageUtils";
+  import {
+    useTranslations,
+    buildLocalePath,
+    type SupportedLanguages,
+  } from "../i18n/languageUtils";
   import LanguageSwitcher from "./LanguageSwitcher.vue";
-
-  const t = useTranslations();
+  const props = defineProps<{ lang: SupportedLanguages }>();
+  const t = useTranslations(props.lang);
   const isDropdownOpen = ref<boolean>(false);
 </script>
 
