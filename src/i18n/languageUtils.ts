@@ -1,26 +1,24 @@
-import { ref } from "vue";
 import { locale } from "./locale";
 
 export type SupportedLanguages = keyof typeof locale;
-const defaultLang = "de";
-export const lang = ref<SupportedLanguages>(defaultLang);
+const defaultLang: SupportedLanguages = "de";
 
-export function getLangFromUrl(url: URL) {
+// Pure function: derives lang from the URL, no side effects.
+export function getLangFromUrl(url: URL): SupportedLanguages {
   const [, language] = url.pathname.split("/");
   if (language && language in locale) {
-    lang.value = language as SupportedLanguages;
-    return lang.value;
+    return language as SupportedLanguages;
   }
-  lang.value = defaultLang;
-  return lang.value;
+  return defaultLang;
 }
 
-export function useTranslations() {
-  return function t(key: keyof (typeof locale)[typeof lang.value]) {
-    return locale[lang.value][key];
+// Takes lang explicitly instead of closing over a shared ref.
+export function useTranslations(lang: SupportedLanguages) {
+  return function t(key: keyof (typeof locale)[typeof lang]) {
+    return locale[lang][key];
   };
 }
 
-export function buildLocalePath(path: string) {
-  return lang.value === "en" ? `/en/${path}` : path;
+export function buildLocalePath(lang: SupportedLanguages, path: string) {
+  return lang === "en" ? `/en/${path}` : path;
 }

@@ -36,6 +36,10 @@
 </template>
 
 <script setup lang="ts">
-  import { useTranslations } from "../i18n/languageUtils";
-  const t = useTranslations();
+  import {
+    useTranslations,
+    type SupportedLanguages,
+  } from "../i18n/languageUtils";
+  const props = defineProps<{ lang: SupportedLanguages }>();
+  const t = useTranslations(props.lang);
 </script>

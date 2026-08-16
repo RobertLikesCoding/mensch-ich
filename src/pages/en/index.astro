@@ -5,14 +5,17 @@ import HeroSection from "../../components/HeroSection.vue";
 import ServicesSection from "../../components/ServicesSection.vue";
 import StrengthsSection from "../../components/StrengthsSection.vue";
 import TeamSection from "../../components/TeamSection.vue";
+import { getLangFromUrl } from "../../i18n/languageUtils";
 import Layout from "../../layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout>
-  <HeroSection />
-  <ServicesSection />
-  <AboutUsSection />
-  <StrengthsSection />
-  <TeamSection />
-  <ContactSection />
+  <HeroSection lang={lang} />
+  <ServicesSection lang={lang} />
+  <AboutUsSection lang={lang} />
+  <StrengthsSection lang={lang} />
+  <TeamSection lang={lang} />
+  <ContactSection lang={lang} />
 </Layout>

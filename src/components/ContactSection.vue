@@ -62,10 +62,14 @@
   import LocatorIcon from "./UI/LocatorIcon.vue";
   import MailIcon from "./UI/MailIcon.vue";
   import TelephoneIcon from "./UI/TelephoneIcon.vue";
-  import { lang, useTranslations } from "../i18n/languageUtils";
-  const t = useTranslations();
+  import {
+    useTranslations,
+    type SupportedLanguages,
+  } from "../i18n/languageUtils";
+  const props = defineProps<{ lang: SupportedLanguages }>();
+  const t = useTranslations(props.lang);
 
-  const formatter = new Intl.DateTimeFormat(lang.value, {
+  const formatter = new Intl.DateTimeFormat(props.lang, {
     hour: "2-digit",
     minute: "2-digit",
   });

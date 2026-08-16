@@ -40,9 +40,13 @@
 <script setup lang="ts">
   import Button from "./UI/Button.vue";
   import heroImage from "../assets/kopf_logo.svg";
-  import { useTranslations } from "../i18n/languageUtils";
+  import {
+    useTranslations,
+    type SupportedLanguages,
+  } from "../i18n/languageUtils";
 
-  const t = useTranslations();
+  const props = defineProps<{ lang: SupportedLanguages }>();
+  const t = useTranslations(props.lang);
 </script>
 
 <style lang="css" scoped>

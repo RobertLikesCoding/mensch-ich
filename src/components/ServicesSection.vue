@@ -54,10 +54,14 @@
   import imgOrthopädie from "../assets/Orthopädie.svg";
   import imgPsychatrie from "../assets/Psychiatrie.svg";
   import imgPädiatrie from "../assets/Pädiatrie.svg";
-  import { useTranslations } from "../i18n/languageUtils";
+  import {
+    useTranslations,
+    type SupportedLanguages,
+  } from "../i18n/languageUtils";
   import ServiceCard from "./ServiceCard.vue";
 
-  const t = useTranslations();
+  const props = defineProps<{ lang: SupportedLanguages }>();
+  const t = useTranslations(props.lang);
 
   const services = computed(() => {
     return [
