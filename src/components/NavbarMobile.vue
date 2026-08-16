@@ -1,5 +1,7 @@
 <template>
-  <nav>
+  <nav
+    class="sm:hidden flex justify-between w-full items-center gap-10 nav-height-mobile h-(--navbar-height-mobile)"
+  >
     <div
       class="flex justify-between items-center w-full z-10 bg-neutral-100 py-2"
     >
@@ -73,12 +75,9 @@
   import { ref } from "vue";
   import imgLogo from "../assets/logo_menschlich.svg";
   import Button from "./UI/Button.vue";
-  import {
-    useTranslations,
-    buildLocalePath,
-    type SupportedLanguages,
-  } from "../i18n/languageUtils";
+  import { useTranslations, buildLocalePath } from "../i18n/languageUtils";
   import LanguageSwitcher from "./LanguageSwitcher.vue";
+  import type { SupportedLanguages } from "../i18n/locale.ts";
   const props = defineProps<{ lang: SupportedLanguages }>();
   const t = useTranslations(props.lang);
   const isDropdownOpen = ref<boolean>(false);

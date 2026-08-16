@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.vue";
-import NavbarDesktop from "../components/NavbarDesktop.vue";
+import NavbarDesktop from "../components/NavbarDesktop.astro";
 import NavbarMobile from "../components/NavbarMobile.vue";
 import "../styles/global.css"; // imports tailwind to all pages using this layout
 import { getLangFromUrl } from "../i18n/languageUtils";
@@ -33,15 +33,8 @@ const {
     <header
       class="w-full flex items-center justify-center bg-neutral-100 fixed z-20"
     >
-      <NavbarDesktop
-        lang={lang}
-        class="sm:flex hidden items-center gap-5 md:gap-10 nav-height-desktop px-3"
-      />
-      <NavbarMobile
-        lang={lang}
-        client:load
-        class="sm:hidden flex justify-between w-full items-center gap-10 nav-height-mobile"
-      />
+      <NavbarDesktop />
+      <NavbarMobile lang={lang} client:media="(max-width: 639px)" />
     </header>
     <main class="flex flex-col gap-24 nav-margin m-auto mb-16">
       <slot />
@@ -64,19 +57,11 @@ const {
     }
 
     .nav-margin {
-      padding-top: 131px;
+      padding-top: var(--navbar-height-desktop);
 
       @media (max-width: 639px) {
         padding-top: 96px;
       }
-    }
-
-    .nav-height-desktop {
-      height: var(--navbar-height-desktop);
-    }
-
-    .nav-height-mobile {
-      height: var(--navbar-height-mobile);
     }
   </style>
 </html>
