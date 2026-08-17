@@ -74,10 +74,10 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import imgLogo from "../assets/logo_menschlich.svg";
-  import Button from "./UI/Button.vue";
   import { useTranslations, buildLocalePath } from "../i18n/languageUtils";
   import LanguageSwitcher from "./LanguageSwitcher.vue";
   import type { SupportedLanguages } from "../i18n/locale.ts";
+  import Button from "./UI/Button.vue";
   const props = defineProps<{ lang: SupportedLanguages }>();
   const t = useTranslations(props.lang);
   const isDropdownOpen = ref<boolean>(false);

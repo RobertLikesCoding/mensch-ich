@@ -8,12 +8,32 @@
       EN
     </a>
   </div>
-  <LanguageIcon />
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z"
+      stroke="black"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+    <path
+      d="M13 2.0498C13 2.0498 16 5.9998 16 11.9998C16 17.9998 13 21.9498 13 21.9498M11 21.9498C11 21.9498 8 17.9998 8 11.9998C8 5.9998 11 2.0498 11 2.0498M2.63 15.4998H21.37M2.63 8.4998H21.37"
+      stroke="black"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+  </svg>
 </template>
 
 <script setup lang="ts">
-  import LanguageIcon from "./UI/LanguageIcon.vue";
-  import type { SupportedLanguages } from "../i18n/languageUtils";
+  import type { SupportedLanguages } from "../i18n/locale.ts";
 
   defineProps<{ lang: SupportedLanguages }>();
 </script>

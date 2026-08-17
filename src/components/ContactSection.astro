@@ -1,0 +1,82 @@
+---
+import ClockIcon from "./UI/ClockIcon.astro";
+import LocatorIcon from "./UI/LocatorIcon.astro";
+import MailIcon from "./UI/MailIcon.astro";
+import TelephoneIcon from "./UI/TelephoneIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/languageUtils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const formatter = new Intl.DateTimeFormat(lang, {
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+const MondayToThursdayStart = formatter.format(new Date(0, 0, 0, 9, 0));
+const MondayToThursdayEnd = formatter.format(new Date(0, 0, 0, 18, 0));
+const FridayStart = formatter.format(new Date(0, 0, 0, 9, 0));
+const FridayEnd = formatter.format(new Date(0, 0, 0, 14, 0));
+---
+
+<section id="kontakt" class="flex justify-center relative px-3">
+  <div class="flex flex-col gap-5 max-w-5xl">
+    <h2
+      class="text-4xl sm:text-5xl font-bold text-primary-600 mb-3 text-center"
+    >
+      {t("contact.heading")}
+    </h2>
+    <p class="text-center" set:html={t("contact.intro")} />
+    <div
+      class="flex flex-col sm:flex-row m-auto w-80 sm:w-full flex-wrap gap-5 sm:ps-0 ps-10 justify-center"
+    >
+      <div class="flex p-1" aria-label="Telefonkontakt">
+        <TelephoneIcon class="text-primary-600 m-3" />
+        <div>
+          <p class="text-primary-600">{t("contact.phone.label")}</p>
+          +49152 2880 5368
+        </div>
+      </div>
+      <div class="flex p-1" aria-label="Emailkontakt">
+        <MailIcon class="text-primary-600 m-3" />
+        <div>
+          <p class="text-primary-600">{t("contact.email.label")}</p>
+          ergotherapie-menschlich@posteo.de
+        </div>
+      </div>
+      <div class="flex p-1" aria-label="Adresse & Anfahrt">
+        <LocatorIcon class="text-primary-600 m-3" />
+        <div>
+          <p class="text-primary-600">{t("contact.address.label")}</p>
+          <p set:html={t("contact.address")} />
+        </div>
+      </div>
+      <div class="flex p-1" aria-label="Öffnungszeiten">
+        <ClockIcon class="text-primary-600 m-3" />
+        <div>
+          <p class="text-primary-600">{t("contact.opening.label")}</p>
+          <p>
+            {t("contact.opening.monToThu")}
+            {MondayToThursdayStart} -
+            {MondayToThursdayEnd}
+            {lang === "de" ? "Uhr" : null}
+          </p>
+          <p>
+            {t("contact.opening.friday")}
+            {FridayStart} -
+            {FridayEnd}
+            {lang === "de" ? "Uhr" : null}
+          </p>
+          <p set:html={t("contact.opening.weekend")} />
+        </div>
+      </div>
+    </div>
+    <p class="bg-neutral-300 rounded-2xl p-3" set:html={t("contact.route")} />
+  </div>
+</section>
+
+<style>
+  section {
+    scroll-margin-top: 150px;
+  }
+</style>
