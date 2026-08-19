@@ -1,7 +1,4 @@
-import { locale } from "./locale";
-
-export type SupportedLanguages = keyof typeof locale;
-const defaultLang: SupportedLanguages = "de";
+import { defaultLang, locale, type SupportedLanguages } from "./locale";
 
 // Pure function: derives lang from the URL, no side effects.
 export function getLangFromUrl(url: URL): SupportedLanguages {
@@ -12,10 +9,10 @@ export function getLangFromUrl(url: URL): SupportedLanguages {
   return defaultLang;
 }
 
-// Takes lang explicitly instead of closing over a shared ref.
 export function useTranslations(lang: SupportedLanguages) {
-  return function t(key: keyof (typeof locale)[typeof lang]) {
-    return locale[lang][key];
+  const localizedUI: Record<string, string> = locale[lang];
+  return function t(key: keyof (typeof locale)[typeof defaultLang]) {
+    return key in localizedUI ? localizedUI[key] : locale[defaultLang][key];
   };
 }
 

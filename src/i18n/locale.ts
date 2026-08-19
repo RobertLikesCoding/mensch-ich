@@ -1,3 +1,6 @@
+export type SupportedLanguages = keyof typeof locale;
+export const defaultLang: SupportedLanguages = "de";
+
 export const locale = {
   de: {
     "nav.services": "Leistungen",

@@ -1,13 +1,17 @@
 <template>
-  <nav>
+  <nav
+    class="sm:hidden flex justify-between w-full items-center gap-10 nav-height-mobile h-(--navbar-height-mobile)"
+  >
     <div
       class="flex justify-between items-center w-full z-10 bg-neutral-100 py-2"
     >
       <a :href="buildLocalePath(lang, '#page-top')">
         <img
-          :src="imgLogo.src"
+          :src="logoSvg.src"
           alt="Logo der Ergotherapie Mensch/ich."
           class="h-20 ps-3"
+          width="193"
+          height="80"
         />
       </a>
 
@@ -71,14 +75,11 @@
 
 <script setup lang="ts">
   import { ref } from "vue";
-  import imgLogo from "../assets/logo_menschlich.svg";
-  import Button from "./UI/Button.vue";
-  import {
-    useTranslations,
-    buildLocalePath,
-    type SupportedLanguages,
-  } from "../i18n/languageUtils";
+  import logoSvg from "../assets/logo_menschlich.svg";
+  import { useTranslations, buildLocalePath } from "../i18n/languageUtils";
   import LanguageSwitcher from "./LanguageSwitcher.vue";
+  import type { SupportedLanguages } from "../i18n/locale.ts";
+  import Button from "./UI/Button.vue";
   const props = defineProps<{ lang: SupportedLanguages }>();
   const t = useTranslations(props.lang);
   const isDropdownOpen = ref<boolean>(false);
